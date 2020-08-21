@@ -49,7 +49,7 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "bsp/bsp.h"
-#include "peripheral/i2c/plib_i2c4.h"
+#include "peripheral/i2c/master/plib_i2c4_master.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
