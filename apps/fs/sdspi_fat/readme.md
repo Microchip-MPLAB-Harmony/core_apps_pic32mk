@@ -56,7 +56,7 @@ The following table shows the target hardware for the application projects.
 ### Setting up PIC32MK MCJ Curiosity Pro Board
 
 - Connect micro USB cable to the 'Debug USB' connector(J1) on the board to the computer
-- Connect [IO1 Xplained Pro Extension Kit](https://www.microchip.com/developmenttools/ProductDetails/ATIO1-XPRO) to the EXT1 header of PIC32MK MCJ Curiosity Pro Development Board
+- Connect [IO1 Xplained Pro Extension Kit](https://www.microchip.com/developmenttools/ProductDetails/ATIO1-XPRO) to the EXT1 (J501) header of PIC32MK MCJ Curiosity Pro Development Board
 - Insert the micro-SD Card in the micro-SD Card slot of the [IO1 Xplained Pro Extension Kit](https://www.microchip.com/developmenttools/ProductDetails/ATIO1-XPRO)
 
 ### Setting up PIC32MK MCM Curiosity Pro Board
