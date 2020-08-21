@@ -52,7 +52,7 @@
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
 #include "driver/at25/drv_at25.h"
-#include "peripheral/spi/plib_spi2.h"
+#include "peripheral/spi/spi_master/plib_spi2_master.h"
 #include "bsp/bsp.h"
 #include "system/int/sys_int.h"
 #include "system/ports/sys_ports.h"
