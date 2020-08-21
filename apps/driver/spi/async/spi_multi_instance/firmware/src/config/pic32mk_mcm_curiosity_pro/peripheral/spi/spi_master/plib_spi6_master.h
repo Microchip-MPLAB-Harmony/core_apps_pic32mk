@@ -5,10 +5,10 @@
     Microchip Technology Inc.
 
   File Name:
-    plib_spi2.h
+    plib_spi6_master.h
 
   Summary:
-    SPI2 PLIB Header File
+    SPI6 Master PLIB Header File
 
   Description:
     This file has prototype of all the interfaces provided for particular
@@ -39,11 +39,11 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#ifndef PLIB_SPI2_H
-#define PLIB_SPI2_H
+#ifndef PLIB_SPI6_MASTER_H
+#define PLIB_SPI6_MASTER_H
 
 #include "device.h"
-#include "plib_spi_common.h"
+#include "plib_spi_master_common.h"
 
 /* Provide C++ Compatibility */
 #ifdef __cplusplus
@@ -53,21 +53,21 @@
 #endif
 
 
-/****************************** SPI2 Interface *********************************/
+/****************************** SPI6 Interface *********************************/
 
-void SPI2_Initialize ( void );
+void SPI6_Initialize ( void );
 
-bool SPI2_WriteRead (void* pTransmitData, size_t txSize, void* pReceiveData, size_t rxSize);
+bool SPI6_WriteRead (void* pTransmitData, size_t txSize, void* pReceiveData, size_t rxSize);
 
-bool SPI2_Write(void* pTransmitData, size_t txSize);
+bool SPI6_Write(void* pTransmitData, size_t txSize);
 
-bool SPI2_Read(void* pReceiveData, size_t rxSize);
+bool SPI6_Read(void* pReceiveData, size_t rxSize);
 
-bool SPI2_TransferSetup (SPI_TRANSFER_SETUP *setup, uint32_t spiSourceClock);
+bool SPI6_TransferSetup (SPI_TRANSFER_SETUP *setup, uint32_t spiSourceClock);
 
-bool SPI2_IsBusy(void);
+bool SPI6_IsBusy(void);
 
-void SPI2_CallbackRegister(SPI_CALLBACK callback, uintptr_t context);
+void SPI6_CallbackRegister(SPI_CALLBACK callback, uintptr_t context);
 
 /* Provide C++ Compatibility */
 #ifdef __cplusplus
@@ -76,4 +76,4 @@ void SPI2_CallbackRegister(SPI_CALLBACK callback, uintptr_t context);
 
 #endif
 
-#endif // PLIB_SPI2_H
+#endif // PLIB_SPI6_MASTER_H
