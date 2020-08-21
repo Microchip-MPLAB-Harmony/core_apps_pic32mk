@@ -39,7 +39,7 @@ The following table shows the target hardware for the application projects.
 
 - Connect micro USB cable to the 'Debug USB' connector(J1) on the board to the computer
 - Install [EEPROM 4 Click](https://www.mikroe.com/eeprom-4-click) boards on to the [mikroBUS Xplained Pro](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) boards
-- Connect [mikroBUS Xplained Pro](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) boards on to the "EXT1" and "EXT2" headers of the PIC32MK MCJ Curiosity Pro Development Board
+- Connect [mikroBUS Xplained Pro](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) boards on to the "EXT1" (J501) and "EXT2" (J502) headers of the PIC32MK MCJ Curiosity Pro Development Board
 
 ## Running the Application
 

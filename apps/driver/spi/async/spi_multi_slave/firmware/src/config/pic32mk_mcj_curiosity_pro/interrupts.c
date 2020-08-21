@@ -67,22 +67,22 @@ void DMA1_InterruptHandler( void );
 
 
 /* All the handlers are defined here.  Each will call its PLIB-specific function. */
-void __ISR(_SPI2_RX_VECTOR, ipl1AUTO) SPI2_RX_Handler (void)
+void __ISR(_SPI2_RX_VECTOR, ipl1SRS) SPI2_RX_Handler (void)
 {
     SPI2_RX_InterruptHandler();
 }
 
-void __ISR(_SPI2_TX_VECTOR, ipl1AUTO) SPI2_TX_Handler (void)
+void __ISR(_SPI2_TX_VECTOR, ipl1SRS) SPI2_TX_Handler (void)
 {
     SPI2_TX_InterruptHandler();
 }
 
-void __ISR(_DMA0_VECTOR, ipl1AUTO) DMA0_Handler (void)
+void __ISR(_DMA0_VECTOR, ipl1SRS) DMA0_Handler (void)
 {
     DMA0_InterruptHandler();
 }
 
-void __ISR(_DMA1_VECTOR, ipl1AUTO) DMA1_Handler (void)
+void __ISR(_DMA1_VECTOR, ipl1SRS) DMA1_Handler (void)
 {
     DMA1_InterruptHandler();
 }
