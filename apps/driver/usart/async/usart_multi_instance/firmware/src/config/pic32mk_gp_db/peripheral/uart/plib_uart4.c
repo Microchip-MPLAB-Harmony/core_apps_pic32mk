@@ -93,7 +93,7 @@ void UART4_Initialize( void )
     /* Set up UxMODE bits */
     /* STSEL  = 0*/
     /* PDSEL = 0 */
-    /* BRGH = 0 */
+    /* BRGH = 1 */
     /* RXINV = 0 */
     /* ABAUD = 0 */
     /* LPBACK = 0 */
@@ -102,13 +102,14 @@ void UART4_Initialize( void )
     /* RUNOVF = 0 */
     /* CLKSEL = 0 */
     /* SLPEN = 0 */
-    U4MODE = 0x0;
+    /* UEN = 0 */
+    U4MODE = 0x8;
 
     /* Enable UART4 Receiver, Transmitter and TX Interrupt selection */
-    U4STASET = (_U4STA_UTXEN_MASK | _U4STA_URXEN_MASK | _U4STA_UTXISEL0_MASK);
+    U4STASET = (_U4STA_UTXEN_MASK | _U4STA_URXEN_MASK | _U4STA_UTXISEL1_MASK);
 
     /* BAUD Rate register Setup */
-    U4BRG = 32;
+    U4BRG = 129;
 
     /* Disable Interrupts */
     IEC2CLR = _IEC2_U4EIE_MASK;
@@ -136,9 +137,9 @@ void UART4_Initialize( void )
 bool UART4_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
 {
     bool status = false;
-    uint32_t baud = setup->baudRate;
-    uint32_t brgValHigh = 0;
-    uint32_t brgValLow = 0;
+    uint32_t baud;
+    int32_t brgValHigh = 0;
+    int32_t brgValLow = 0;
     uint32_t brgVal = 0;
     uint32_t uartMode;
 
@@ -150,6 +151,13 @@ bool UART4_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
 
     if (setup != NULL)
     {
+        baud = setup->baudRate;
+
+        if (baud == 0)
+        {
+            return status;
+        }
+
         /* Turn OFF UART4 */
         U4MODECLR = _U4MODE_ON_MASK;
 
@@ -159,19 +167,19 @@ bool UART4_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
         }
 
         /* Calculate BRG value */
-        brgValLow = ((srcClkFreq / baud) >> 4) - 1;
-        brgValHigh = ((srcClkFreq / baud) >> 2) - 1;
+        brgValLow = (((srcClkFreq >> 4) + (baud >> 1)) / baud ) - 1;
+        brgValHigh = (((srcClkFreq >> 2) + (baud >> 1)) / baud ) - 1;
 
         /* Check if the baud value can be set with low baud settings */
-        if((brgValHigh >= 0) && (brgValHigh <= UINT16_MAX))
+        if((brgValLow >= 0) && (brgValLow <= UINT16_MAX))
         {
-            brgVal =  (((srcClkFreq >> 2) + (baud >> 1)) / baud ) - 1;
-            U4MODESET = _U4MODE_BRGH_MASK;
-        }
-        else if ((brgValLow >= 0) && (brgValLow <= UINT16_MAX))
-        {
-            brgVal = ( ((srcClkFreq >> 4) + (baud >> 1)) / baud ) - 1;
+            brgVal =  brgValLow;
             U4MODECLR = _U4MODE_BRGH_MASK;
+        }
+        else if ((brgValHigh >= 0) && (brgValHigh <= UINT16_MAX))
+        {
+            brgVal = brgValHigh;
+            U4MODESET = _U4MODE_BRGH_MASK;
         }
         else
         {
@@ -263,11 +271,10 @@ bool UART4_Write( void* buffer, const size_t size )
             uart4Obj.txBusyStatus = true;
             status = true;
 
-            /* Initiate the transfer by sending first byte */
-            if(!(U4STA & _U4STA_UTXBF_MASK))
+            /* Initiate the transfer by writing as many bytes as we can */
+            while((!(U4STA & _U4STA_UTXBF_MASK)) && (uart4Obj.txSize > uart4Obj.txProcessedSize) )
             {
-                U4TXREG = *lBuffer;
-                uart4Obj.txProcessedSize++;
+                U4TXREG = uart4Obj.txBuffer[uart4Obj.txProcessedSize++];
             }
 
             IEC2SET = _IEC2_U4TXIE_MASK;
@@ -329,6 +336,25 @@ size_t UART4_ReadCountGet( void )
     return uart4Obj.rxProcessedSize;
 }
 
+bool UART4_ReadAbort(void)
+{
+    if (uart4Obj.rxBusyStatus == true)
+    {
+        /* Disable the fault interrupt */
+        IEC2CLR = _IEC2_U4EIE_MASK;
+
+        /* Disable the receive interrupt */
+        IEC2CLR = _IEC2_U4RXIE_MASK;
+
+        uart4Obj.rxBusyStatus = false;
+
+        /* If required application should read the num bytes processed prior to calling the read abort API */
+        uart4Obj.rxSize = uart4Obj.rxProcessedSize = 0;
+    }
+
+    return true;
+}
+
 void UART4_WriteCallbackRegister( UART_CALLBACK callback, uintptr_t context )
 {
     uart4Obj.txCallback = callback;
@@ -375,10 +401,14 @@ void UART4_RX_InterruptHandler (void)
             uart4Obj.rxBuffer[uart4Obj.rxProcessedSize++] = (uint8_t )(U4RXREG);
         }
 
+
         /* Check if the buffer is done */
         if(uart4Obj.rxProcessedSize >= uart4Obj.rxSize)
         {
             uart4Obj.rxBusyStatus = false;
+
+            /* Disable the fault interrupt */
+            IEC2CLR = _IEC2_U4EIE_MASK;
 
             /* Disable the receive interrupt */
             IEC2CLR = _IEC2_U4RXIE_MASK;
@@ -407,6 +437,7 @@ void UART4_TX_InterruptHandler (void)
         {
             U4TXREG = uart4Obj.txBuffer[uart4Obj.txProcessedSize++];
         }
+
 
         /* Check if the buffer is done */
         if(uart4Obj.txProcessedSize >= uart4Obj.txSize)
