@@ -48,6 +48,7 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "peripheral/uart/plib_uart1.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
@@ -55,9 +56,10 @@
 #include "task.h"
 #include "bsp/bsp.h"
 #include "osal/osal.h"
-#include "app.h"
-#include "app1.h"
-#include "app2.h"
+#include "task1_mcj.h"
+#include "task2_mcj.h"
+#include "task3_mcj.h"
+#include "task4_mcj.h"
 
 
 
@@ -68,6 +70,9 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* CPU clock frequency */
+#define CPU_CLOCK_FREQUENCY 120000000
 
 // *****************************************************************************
 // *****************************************************************************

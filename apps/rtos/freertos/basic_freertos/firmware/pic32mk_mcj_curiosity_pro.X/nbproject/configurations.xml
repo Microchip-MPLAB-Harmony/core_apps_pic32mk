@@ -26,6 +26,10 @@
             <logicalFolder name="f2" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/gpio/plib_gpio.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="f4" displayName="uart" projectFiles="true">
+              <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/uart/plib_uart_common.h</itemPath>
+              <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/uart/plib_uart1.h</itemPath>
+            </logicalFolder>
           </logicalFolder>
           <itemPath>../src/config/pic32mk_mcj_curiosity_pro/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/pic32mk_mcj_curiosity_pro/definitions.h</itemPath>
@@ -33,6 +37,7 @@
           <itemPath>../src/config/pic32mk_mcj_curiosity_pro/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/pic32mk_mcj_curiosity_pro/user.h</itemPath>
           <itemPath>../src/config/pic32mk_mcj_curiosity_pro/configuration.h</itemPath>
+          <itemPath>../src/config/pic32mk_mcj_curiosity_pro/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="FreeRTOS" projectFiles="true">
@@ -65,16 +70,29 @@
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>../src/app.h</itemPath>
-      <itemPath>../src/app1.h</itemPath>
-      <itemPath>../src/app2.h</itemPath>
+      <itemPath>../src/task1_mcj.h</itemPath>
+      <itemPath>../src/task2_mcj.h</itemPath>
+      <itemPath>../src/task3_mcj.h</itemPath>
+      <itemPath>../src/task4_mcj.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
+      <logicalFolder name="f1"
+                     displayName="pic32mk_mcj_curiosity_pro.mhc"
+                     projectFiles="true">
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/BSP_PIC32MK_MCJ_Curiosity_Pro.yml</itemPath>
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/core.yml</itemPath>
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/FreeRTOS.yml</itemPath>
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/project.yml</itemPath>
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/uart1.yml</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mk_mcj_curiosity_pro/harmony.prj</itemPath>
-      <itemPath>../../../../../../../mhc/../core_apps_pic32mk/apps/rtos/freertos/basic_freertos/firmware/src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.xml</itemPath>
+      <itemPath>../src/config/pic32mk_mcj_curiosity_pro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -109,6 +127,9 @@
             </logicalFolder>
             <logicalFolder name="f2" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/gpio/plib_gpio.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="uart" projectFiles="true">
+              <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/uart/plib_uart1.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f1" displayName="stdio" projectFiles="true">
@@ -145,9 +166,10 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
-      <itemPath>../src/app.c</itemPath>
-      <itemPath>../src/app1.c</itemPath>
-      <itemPath>../src/app2.c</itemPath>
+      <itemPath>../src/task1_mcj.c</itemPath>
+      <itemPath>../src/task2_mcj.c</itemPath>
+      <itemPath>../src/task3_mcj.c</itemPath>
+      <itemPath>../src/task4_mcj.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -204,7 +226,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mk_mcj_curiosity_pro;../src/packs/PIC32MK0512MCJ064_DFP;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MK;../src/third_party/rtos/FreeRTOS/Source/include"/>
+                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MK;../src/third_party/rtos/FreeRTOS/Source/include;../src;../src/config/pic32mk_mcj_curiosity_pro;../src/packs/PIC32MK0512MCJ064_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -231,9 +253,9 @@
         <property key="exclude-floating-point-library" value="false"/>
         <property key="expand-macros" value="false"/>
         <property key="extra-include-directories-for-assembler"
-                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MK;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/pic32mk_mcj_curiosity_pro"/>
+                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MK;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/pic32mk_mcj_curiosity_pro;"/>
         <property key="extra-include-directories-for-preprocessor"
-                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MK;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/pic32mk_mcj_curiosity_pro"/>
+                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MK;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/pic32mk_mcj_curiosity_pro;"/>
         <property key="false-conditionals" value="false"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
@@ -302,7 +324,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mk_mcj_curiosity_pro;../src/packs/PIC32MK0512MCJ064_DFP;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MK;../src/third_party/rtos/FreeRTOS/Source/include"/>
+                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MK;../src/third_party/rtos/FreeRTOS/Source/include;../src;../src/config/pic32mk_mcj_curiosity_pro;../src/packs/PIC32MK0512MCJ064_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>

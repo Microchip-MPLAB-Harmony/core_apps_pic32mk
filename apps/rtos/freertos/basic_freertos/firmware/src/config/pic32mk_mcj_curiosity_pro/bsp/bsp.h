@@ -70,10 +70,6 @@
 #define LED2_Get() ((PORTA >> 10) & 0x1)
 #define LED2_On() (LATACLR = (1<<10))
 #define LED2_Off() (LATASET = (1<<10))
-/*** SWITCH Macros for SWITCH ***/
-#define SWITCH_Get() ((PORTB >> 8) & 0x1)
-#define SWITCH_STATE_PRESSED 0
-#define SWITCH_STATE_RELEASED 1
 
 
 

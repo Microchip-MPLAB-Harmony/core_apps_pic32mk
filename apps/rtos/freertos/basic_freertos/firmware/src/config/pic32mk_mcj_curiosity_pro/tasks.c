@@ -59,34 +59,44 @@
 // Section: RTOS "Tasks" Routine
 // *****************************************************************************
 // *****************************************************************************
-/* Handle for the APP_Tasks. */
-TaskHandle_t xAPP_Tasks;
+/* Handle for the TASK1_MCJ_Tasks. */
+TaskHandle_t xTASK1_MCJ_Tasks;
 
-void _APP_Tasks(  void *pvParameters  )
+void _TASK1_MCJ_Tasks(  void *pvParameters  )
 {   
     while(1)
     {
-        APP_Tasks();
+        TASK1_MCJ_Tasks();
     }
 }
-/* Handle for the APP1_Tasks. */
-TaskHandle_t xAPP1_Tasks;
+/* Handle for the TASK2_MCJ_Tasks. */
+TaskHandle_t xTASK2_MCJ_Tasks;
 
-void _APP1_Tasks(  void *pvParameters  )
+void _TASK2_MCJ_Tasks(  void *pvParameters  )
 {   
     while(1)
     {
-        APP1_Tasks();
+        TASK2_MCJ_Tasks();
     }
 }
-/* Handle for the APP2_Tasks. */
-TaskHandle_t xAPP2_Tasks;
+/* Handle for the TASK3_MCJ_Tasks. */
+TaskHandle_t xTASK3_MCJ_Tasks;
 
-void _APP2_Tasks(  void *pvParameters  )
+void _TASK3_MCJ_Tasks(  void *pvParameters  )
 {   
     while(1)
     {
-        APP2_Tasks();
+        TASK3_MCJ_Tasks();
+    }
+}
+/* Handle for the TASK4_MCJ_Tasks. */
+TaskHandle_t xTASK4_MCJ_Tasks;
+
+void _TASK4_MCJ_Tasks(  void *pvParameters  )
+{   
+    while(1)
+    {
+        TASK4_MCJ_Tasks();
     }
 }
 
@@ -118,29 +128,37 @@ void SYS_Tasks ( void )
     
 
     /* Maintain the application's state machine. */
-        /* Create OS Thread for APP_Tasks. */
-    xTaskCreate((TaskFunction_t) _APP_Tasks,
-                "APP_Tasks",
+        /* Create OS Thread for TASK1_MCJ_Tasks. */
+    xTaskCreate((TaskFunction_t) _TASK1_MCJ_Tasks,
+                "TASK1_MCJ_Tasks",
                 1024,
                 NULL,
                 1,
-                &xAPP_Tasks);
+                &xTASK1_MCJ_Tasks);
 
-    /* Create OS Thread for APP1_Tasks. */
-    xTaskCreate((TaskFunction_t) _APP1_Tasks,
-                "APP1_Tasks",
+    /* Create OS Thread for TASK2_MCJ_Tasks. */
+    xTaskCreate((TaskFunction_t) _TASK2_MCJ_Tasks,
+                "TASK2_MCJ_Tasks",
                 1024,
                 NULL,
                 2,
-                &xAPP1_Tasks);
+                &xTASK2_MCJ_Tasks);
 
-    /* Create OS Thread for APP2_Tasks. */
-    xTaskCreate((TaskFunction_t) _APP2_Tasks,
-                "APP2_Tasks",
+    /* Create OS Thread for TASK3_MCJ_Tasks. */
+    xTaskCreate((TaskFunction_t) _TASK3_MCJ_Tasks,
+                "TASK3_MCJ_Tasks",
                 1024,
                 NULL,
-                2,
-                &xAPP2_Tasks);
+                3,
+                &xTASK3_MCJ_Tasks);
+
+    /* Create OS Thread for TASK4_MCJ_Tasks. */
+    xTaskCreate((TaskFunction_t) _TASK4_MCJ_Tasks,
+                "TASK4_MCJ_Tasks",
+                1024,
+                NULL,
+                4,
+                &xTASK4_MCJ_Tasks);
 
 
 

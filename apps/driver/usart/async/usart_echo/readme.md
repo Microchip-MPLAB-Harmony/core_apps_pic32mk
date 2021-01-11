@@ -77,6 +77,6 @@ Refer to the following table for LED name:
 | Board | LED Name |
 | ----- | -------- |
 |  [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) | LED1 |
-|  PIC32MK MCJ Curiosity Pro Board | LED2 |
-|  PIC32MK MCM Curiosity Pro Board | LED2 |
+|  PIC32MK MCJ Curiosity Pro Board | LED1 |
+|  PIC32MK MCM Curiosity Pro Board | LED1 |
 |||
