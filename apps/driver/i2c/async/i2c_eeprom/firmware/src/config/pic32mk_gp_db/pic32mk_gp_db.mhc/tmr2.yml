@@ -1,0 +1,44 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: tmr2}
+children:
+- type: Symbols
+  children:
+  - type: Integer
+    attributes: {id: TIMER_CLOCK_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tmr2, value: '60000000'}
+  - type: Long
+    attributes: {id: TIMER_PERIOD}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tmr2, value: '17999'}
+  - type: Integer
+    attributes: {id: TIMER_WIDTH}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tmr2, value: '16'}
+- type: Attachments
+  children:
+  - type: DirectCapability
+    attributes: {id: TMR2_TMR}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: i2c_bb}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: TMR}
+- type: ElementPosition
+  attributes: {x: '23', y: '96', id: tmr2}
