@@ -48,13 +48,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 972E955D94A63BA89BF6ABD6AADB1023
-- generatedChecksum: 67DE71044EBE7064C19E8C06F176D910
+- generatedChecksum: 0B290BC72FB8445B6FC73BA58483F845
   logicalPath: config\pic32mk_mcm_curiosity_pro
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 67DE71044EBE7064C19E8C06F176D910
+  userChecksum: 0B290BC72FB8445B6FC73BA58483F845
 - generatedChecksum: E8D060EAD18CEAA8C7831EBA45832E9E
   logicalPath: config\pic32mk_mcm_curiosity_pro
   name: interrupts.c
@@ -461,13 +461,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: 4E94809C0DA4961DBBC8AA123A67CBF0
+- generatedChecksum: 51008F94CB120E2E6113CD8B5B91734A
   logicalPath: config\pic32mk_mcm_curiosity_pro
   name: p32MK1024MCM100.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 4E94809C0DA4961DBBC8AA123A67CBF0
+  userChecksum: 51008F94CB120E2E6113CD8B5B91734A
 format_version: v1.0
 libraries: []
 settings:
