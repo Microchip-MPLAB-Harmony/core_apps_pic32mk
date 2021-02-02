@@ -48,16 +48,22 @@ void _mon_putc(char c);
 
 int _mon_getc(int canblock)
 {
-   volatile int c = 0;
-   while(UART6_Read((void*)&c, 1) != true);
+   int c = 0;
+   bool success = false;
+   (void)canblock;
+   do
+   {
+       success = UART6_Read(&c, 1);                
+   }while( !success);
    return c;
 }
 
 void _mon_putc(char c)
 {
-   uint8_t size = 0;
+   bool success = false;
    do
    {
-       size = UART6_Write((void*)&c, 1);
-   }while (size != 1);
+       success = UART6_Write(&c, 1);
+   }while (!success);
 }
+
