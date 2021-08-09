@@ -57,24 +57,18 @@
 */
 void GPIO_Initialize ( void )
 {
+
     /* PORTA Initialization */
-
     /* PORTB Initialization */
-
     /* PORTC Initialization */
-
     /* PORTD Initialization */
-
     /* PORTE Initialization */
-
     /* PORTF Initialization */
     ANSELFCLR = 0x3000; /* Digital Mode Enable */
-
     /* PORTG Initialization */
     LATG = 0x0; /* Initial Latch Value */
     TRISGCLR = 0x7000; /* Direction Control */
     ANSELGCLR = 0x800; /* Digital Mode Enable */
-
 
 
     /* PPS Input Remapping */
