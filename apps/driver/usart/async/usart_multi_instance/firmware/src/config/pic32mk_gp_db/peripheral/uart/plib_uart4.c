@@ -397,9 +397,6 @@ void UART4_RX_InterruptHandler (void)
 {
     if(uart4Obj.rxBusyStatus == true)
     {
-        /* Clear UART4 RX Interrupt flag */
-        IFS2CLR = _IFS2_U4RXIF_MASK;
-
         while((_U4STA_URXDA_MASK == (U4STA & _U4STA_URXDA_MASK)) && (uart4Obj.rxSize > uart4Obj.rxProcessedSize) )
         {
             if (( U4MODE & (_U4MODE_PDSEL0_MASK | _U4MODE_PDSEL1_MASK)) == (_U4MODE_PDSEL0_MASK | _U4MODE_PDSEL1_MASK))
@@ -413,6 +410,9 @@ void UART4_RX_InterruptHandler (void)
                 uart4Obj.rxBuffer[uart4Obj.rxProcessedSize++] = (uint8_t )(U4RXREG);
             }
         }
+
+        /* Clear UART4 RX Interrupt flag */
+        IFS2CLR = _IFS2_U4RXIF_MASK;
 
 
         /* Check if the buffer is done */
@@ -443,9 +443,6 @@ void UART4_TX_InterruptHandler (void)
 {
     if(uart4Obj.txBusyStatus == true)
     {
-        /* Clear UART4TX Interrupt flag */
-        IFS2CLR = _IFS2_U4TXIF_MASK;
-
         while((!(U4STA & _U4STA_UTXBF_MASK)) && (uart4Obj.txSize > uart4Obj.txProcessedSize) )
         {
             if (( U4MODE & (_U4MODE_PDSEL0_MASK | _U4MODE_PDSEL1_MASK)) == (_U4MODE_PDSEL0_MASK | _U4MODE_PDSEL1_MASK))
@@ -460,6 +457,8 @@ void UART4_TX_InterruptHandler (void)
             }
         }
 
+        /* Clear UART4TX Interrupt flag */
+        IFS2CLR = _IFS2_U4TXIF_MASK;
 
         /* Check if the buffer is done */
         if(uart4Obj.txProcessedSize >= uart4Obj.txSize)
