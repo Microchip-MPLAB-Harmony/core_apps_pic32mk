@@ -135,7 +135,7 @@ const DRV_SDSPI_PLIB_INTERFACE drvSDSPI0PlibAPI = {
     .read = (DRV_SDSPI_PLIB_READ)SPI2_Read,
 
     /* SPI PLIB Transfer Status function */
-    .isBusy = (DRV_SDSPI_PLIB_IS_BUSY)SPI2_IsBusy,
+    .isTransmitterBusy = (DRV_SPI_PLIB_TRANSMITTER_IS_BUSY)SPI2_IsTransmitterBusy,
 
     .transferSetup = (DRV_SDSPI_PLIB_SETUP)SPI2_TransferSetup,
 
@@ -182,11 +182,6 @@ const DRV_SDSPI_INIT drvSDSPI0InitData =
 
     .isFsEnabled            = true,
 
-    /* DMA Channel for Transmit */
-    .txDMAChannel           = SYS_DMA_CHANNEL_NONE,
-
-    /* DMA Channel for Receive */
-    .rxDMAChannel           = SYS_DMA_CHANNEL_NONE,
 };
 
 // </editor-fold>
@@ -253,13 +248,15 @@ const SYS_FS_FUNCTIONS FatFsFunctions =
 };
 
 
+
 const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ] =
 {
     {
         .nativeFileSystemType = FAT,
         .nativeFileSystemFunctions = &FatFsFunctions
-    }
+    },
 };
+
 
 // </editor-fold>
 
