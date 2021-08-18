@@ -501,7 +501,14 @@ static void _DRV_SPI_UpdateTransferSetupAndAssertCS(
     /* Assert chip select if configured */
     if(clientObj->setup.chipSelect != SYS_PORT_PIN_NONE)
     {
-        SYS_PORT_PinWrite(clientObj->setup.chipSelect, (bool)(clientObj->setup.csPolarity));
+        if (clientObj->setup.csPolarity == DRV_SPI_CS_POLARITY_ACTIVE_LOW)
+        {
+            SYS_PORT_PinClear(clientObj->setup.chipSelect);
+        }
+        else
+        {
+            SYS_PORT_PinSet(clientObj->setup.chipSelect);
+        }
     }
 }
 
@@ -530,7 +537,14 @@ static void _DRV_SPI_PlibCallbackHandler(uintptr_t contextHandle)
     /* De-assert Chip Select if it is defined by user */
     if(clientObj->setup.chipSelect != SYS_PORT_PIN_NONE)
     {
-        SYS_PORT_PinWrite(clientObj->setup.chipSelect, !((bool)(clientObj->setup.csPolarity)));
+        if (clientObj->setup.csPolarity == DRV_SPI_CS_POLARITY_ACTIVE_LOW)
+        {
+            SYS_PORT_PinSet(clientObj->setup.chipSelect);
+        }
+        else
+        {
+            SYS_PORT_PinClear(clientObj->setup.chipSelect);
+        }
     }
 
     /* Check if the client that submitted the request is active? */
@@ -585,6 +599,69 @@ static void _DRV_SPI_PlibCallbackHandler(uintptr_t contextHandle)
             transferObj->rxSize
         );
     }
+}
+
+/* Locks the SPI driver for exclusive use by a client */
+static bool DRV_SPI_ExclusiveUse( const DRV_HANDLE handle, bool useExclusive )
+{
+    DRV_SPI_CLIENT_OBJ* clientObj = NULL;
+    DRV_SPI_OBJ* dObj = (DRV_SPI_OBJ*)NULL;
+    bool isSuccess = false;
+
+    /* Validate the driver handle */
+    clientObj = _DRV_SPI_DriverHandleValidate(handle);
+
+    if (clientObj != NULL)
+    {
+        dObj = (DRV_SPI_OBJ *)&gDrvSPIObj[clientObj->drvIndex];
+
+        if (useExclusive == true)
+        {
+            if (dObj->drvInExclusiveMode == true)
+            {
+                if (dObj->exclusiveUseClientHandle == handle)
+                {
+                    dObj->exclusiveUseCntr++;
+                    isSuccess = true;
+                }
+            }
+            else
+            {
+                /* Guard against multiple threads trying to lock the driver */
+                if (OSAL_MUTEX_Lock(&dObj->mutexExclusiveUse , OSAL_WAIT_FOREVER ) == OSAL_RESULT_FALSE)
+                {
+                    isSuccess = false;
+                }
+                else
+                {
+                    dObj->drvInExclusiveMode = true;
+                    dObj->exclusiveUseClientHandle = handle;
+                    dObj->exclusiveUseCntr++;
+                    isSuccess = true;
+                }
+            }
+        }
+        else
+        {
+            if (dObj->exclusiveUseClientHandle == handle)
+            {
+                if (dObj->exclusiveUseCntr > 0)
+                {
+                    dObj->exclusiveUseCntr--;
+                    if (dObj->exclusiveUseCntr == 0)
+                    {
+                        dObj->exclusiveUseClientHandle = DRV_HANDLE_INVALID;
+                        dObj->drvInExclusiveMode = false;
+
+                        OSAL_MUTEX_Unlock( &dObj->mutexExclusiveUse);
+                    }
+                }
+                isSuccess = true;
+            }
+        }
+    }
+
+    return isSuccess;
 }
 
 void _DRV_SPI_TX_DMA_CallbackHandler(
@@ -654,12 +731,19 @@ void _DRV_SPI_RX_DMA_CallbackHandler(
     else
     {
         /* Make sure the shift register is empty before de-asserting the CS line */
-        while (dObj->spiPlib->isBusy());
+        while (dObj->spiPlib->isTransmitterBusy());
 
         /* Transfer complete. De-assert Chip Select if it is defined by user. */
         if(clientObj->setup.chipSelect != SYS_PORT_PIN_NONE)
         {
-            SYS_PORT_PinWrite(clientObj->setup.chipSelect, !((bool)(clientObj->setup.csPolarity)));
+            if (clientObj->setup.csPolarity == DRV_SPI_CS_POLARITY_ACTIVE_LOW)
+            {
+                SYS_PORT_PinSet(clientObj->setup.chipSelect);
+            }
+            else
+            {
+                SYS_PORT_PinClear(clientObj->setup.chipSelect);
+            }
         }
 
         /* Check if the client that submitted the request is active? */
@@ -761,6 +845,11 @@ SYS_MODULE_OBJ DRV_SPI_Initialize (
         return SYS_MODULE_OBJ_INVALID;
     }
 
+    if(OSAL_MUTEX_Create(&(dObj->mutexExclusiveUse)) != OSAL_RESULT_TRUE)
+    {
+        return SYS_MODULE_OBJ_INVALID;
+    }
+
     dObj->inUse = true;
 
     /* Update the driver parameters */
@@ -783,6 +872,8 @@ SYS_MODULE_OBJ DRV_SPI_Initialize (
     dObj->remapClockPolarity        = spiInit->remapClockPolarity;
     dObj->remapClockPhase           = spiInit->remapClockPhase;
     dObj->interruptSources          = spiInit->interruptSources;
+    dObj->drvInExclusiveMode        = false;
+    dObj->exclusiveUseCntr          = 0;
 
 
     if((dObj->txDMAChannel == SYS_DMA_CHANNEL_NONE) || (dObj->rxDMAChannel == SYS_DMA_CHANNEL_NONE))
@@ -942,6 +1033,17 @@ void DRV_SPI_Close( DRV_HANDLE handle )
         return;
     }
 
+    /* Release the mutex if the client being closed was using the driver in exclusive mode */
+    if (dObj->exclusiveUseClientHandle == handle)
+    {
+        dObj->drvInExclusiveMode = false;
+        dObj->exclusiveUseCntr = 0;
+        dObj->exclusiveUseClientHandle = DRV_HANDLE_INVALID;
+
+        /* Release the exclusive use mutex (if held by the client) */
+        OSAL_MUTEX_Unlock( &dObj->mutexExclusiveUse);
+    }
+
     /* Remove all buffers that this client owns from the driver queue */
     _DRV_SPI_RemoveClientTransfersFromList(dObj, clientObj);
 
@@ -1067,6 +1169,14 @@ void DRV_SPI_WriteReadTransferAdd (
     {
         dObj = (DRV_SPI_OBJ *)&gDrvSPIObj[clientObj->drvIndex];
 
+        if (dObj->drvInExclusiveMode == true)
+        {
+            if (dObj->exclusiveUseClientHandle != handle)
+            {
+                return;
+            }
+        }
+
         if(_DRV_SPI_ResourceLock(dObj) == false)
         {
             SYS_DEBUG_MESSAGE(SYS_ERROR_ERROR, "Failed to get resource lock");
@@ -1186,4 +1296,9 @@ DRV_SPI_TRANSFER_EVENT DRV_SPI_TransferStatusGet(const DRV_SPI_TRANSFER_HANDLE t
     {
         return dObj->transferObjPool[transferIndex].event;
     }
+}
+
+bool DRV_SPI_Lock( const DRV_HANDLE handle, bool lock )
+{
+    return DRV_SPI_ExclusiveUse(handle, lock );
 }
