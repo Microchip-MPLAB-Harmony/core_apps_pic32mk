@@ -14,7 +14,7 @@ nav_order: 99
 
 Following table provides number of peripheral library examples available for different development kits.
 
-| Development Kits  | MPLABx applications |
+| Development Kits  | MPLAB X applications |
 |:-----------------:|:-------------------:|
 | [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) | 11 |
 | PIC32MK MCJ Curiosity Pro Board | 14 |
@@ -41,7 +41,7 @@ Following table provides number of peripheral library examples available for dif
 
 Following table provides number of peripheral library examples available for different development kits.
 
-| Development Kits  | MPLABx applications |
+| Development Kits  | MPLAB X applications |
 |:-----------------:|:-------------------:|
 | [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) | 11 |
 | PIC32MK MCJ Curiosity Pro Board | 14 |
@@ -53,7 +53,7 @@ Following table provides number of peripheral library examples available for dif
 
 ### Known Issues
 
-- Data Transmission/Reception over UART fails when configured to use Virtual Com port (PkoB4) for PC32MK MCJ device with MPLABX v5.45
+- Data Transmission/Reception over UART fails when configured to use Virtual Com port (PkoB4) for PC32MK MCJ device with MPLAB X v5.45
   - Install the old tool pack version (1.1.166) for MPLAB-X v5.45 and use that while programming the PIC32MK MCJ board
 
 ### Development Tools
@@ -83,7 +83,7 @@ Following table provides number of peripheral library examples available for dif
 
 Following table provides number of peripheral library examples available for different development kits.
 
-| Development Kits  | MPLABx applications |
+| Development Kits  | MPLAB X applications |
 |:-----------------:|:-------------------:|
 | PIC32MK MCJ Curiosity Pro Board | 14 |
 | PIC32MK MCM Curiosity Pro Board | 11 |
