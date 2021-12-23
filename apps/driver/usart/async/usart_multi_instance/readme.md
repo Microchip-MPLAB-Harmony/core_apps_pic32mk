@@ -27,6 +27,7 @@ To build the application, refer to the following table and open the project usin
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
 | pic32mk_gp_db.X | MPLABX project for [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
+| pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
 |||
 
 ## Setting up the hardware
@@ -36,6 +37,7 @@ The following table shows the target hardware for the application projects.
 | Project Name| Board|
 |:---------|:---------:|
 | pic32mk_gp_db.X | [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
+| pic32mk_mca_curiosity_pro.X | PIC32MK MCA Curiosity Pro Board |
 |||
 
 - To run the demo, the following additional hardware are required:
@@ -46,6 +48,12 @@ The following table shows the target hardware for the application projects.
 - Connect micro USB cable to the 'Debug USB' connector(J12) on the board to the computer
 - Connect a micro USB cable to the USART-USB port J25. This will enumerate the first COM port
 - Install an [USB UART click](https://www.mikroe.com/usb-uart-click) board on to the mikroBUS socket J1
+- Connect mini USB cable to the [USB UART click](https://www.mikroe.com/usb-uart-click) board. This will enumerate the second COM port
+
+### Setting up PIC32MK MCA Curiosity Pro Board
+
+- Connect micro USB cable to the 'Debug USB' connector(J1) on the board to the computer. This will enumerate as first COM port on the PC
+- Install an [USB UART click](https://www.mikroe.com/usb-uart-click) board on to the mikroBUS socket
 - Connect mini USB cable to the [USB UART click](https://www.mikroe.com/usb-uart-click) board. This will enumerate the second COM port
 
 ## Running the Application
@@ -73,4 +81,5 @@ Refer to the following table for LED name:
 | Board | LED Name |
 | ----- | -------- |
 |  [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) | LED1 |
+|  PIC32MK MCA Curiosity Pro Board | LED1 |
 |||
