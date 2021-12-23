@@ -31,6 +31,7 @@ To build the application, refer to the following table and open the project usin
 | pic32mk_gp_db.X | MPLABX project for [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
 | pic32mk_mcj_curiosity_pro.X | MPLABX project for PIC32MK MCJ Curiosity Pro Board |
 | pic32mk_mcm_curiosity_pro.X | MPLABX project for PIC32MK MCM Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
 |||
 
 ## Setting up the hardware
@@ -41,6 +42,7 @@ The following table shows the target hardware for the application projects.
 |:---------|:---------:|
 | pic32mk_mcm_curiosity_pro.X | PIC32MK MCM Curiosity Pro Board |
 | pic32mk_mcj_curiosity_pro.X | PIC32MK MCJ Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | PIC32MK MCA Curiosity Pro Board |
 | pic32mk_gp_db.X | [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
 |||
 
@@ -57,6 +59,10 @@ The following table shows the target hardware for the application projects.
 
 - Connect a micro USB cable to the USB DEBUG port J500
 - Connect a micro USB cable to the USB to UART port J400. This will enumerate as a COM port on the PC
+
+### Setting up PIC32MK MCA Curiosity Pro Board
+
+- Connect micro USB cable to the 'Debug USB' connector(J1) on the board to the computer. This will enumerate as a COM port on the PC
 
 ## Running the Application
 
@@ -99,4 +105,6 @@ Refer to the following table for LED name:
 |  [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) | LED1 |
 |  PIC32MK MCJ Curiosity Pro Board | LED2 |
 |  PIC32MK MCM Curiosity Pro Board | LED2 |
+|  PIC32MK MCA Curiosity Pro Board | LED1 |
+
 |||
