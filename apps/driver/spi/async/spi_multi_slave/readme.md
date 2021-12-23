@@ -27,6 +27,7 @@ To build the application, refer to the following table and open the project usin
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
 | pic32mk_mcj_curiosity_pro.X | MPLABX project for PIC32MK MCJ Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
 |||
 
 ## Setting up the hardware
@@ -36,6 +37,7 @@ The following table shows the target hardware for the application projects.
 | Project Name| Board|
 |:---------|:---------:|
 | pic32mk_mcj_curiosity_pro.X | PIC32MK MCJ Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | PIC32MK MCA Curiosity Pro Board |
 |||
 
 - To run the demo, the following additional hardware are required:
@@ -48,6 +50,14 @@ The following table shows the target hardware for the application projects.
 - Install [EEPROM 4 Click](https://www.mikroe.com/eeprom-4-click) boards on to the [mikroBUS Xplained Pro](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) boards
 - Connect [mikroBUS Xplained Pro](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) boards on to the "EXT1" (J501) and "EXT2" (J502) headers of the PIC32MK MCJ Curiosity Pro Development Board
 
+### Setting up PIC32MK MCA Curiosity Pro Board
+
+- Connect micro USB cable to the 'Debug USB' connector(J1) on the board to the computer
+- Install one [EEPROM 3 Click](https://www.mikroe.com/eeprom-3-click) board on to the mikroBUS socket of PIC32MK MCA Curiosity Pro Development Board
+- Install another [EEPROM 4 Click](https://www.mikroe.com/eeprom-4-click) board on to the [mikroBUS Xplained Pro](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) board
+- Connect [mikroBUS Xplained Pro](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) board on to the "EXT1" (J501) header of the PIC32MK MCA Curiosity Pro Development Board
+
+
 ## Running the Application
 
 1. Build and program the application using its IDE
@@ -58,4 +68,5 @@ Refer to the following table for LED name:
 | Board | LED Name |
 | ----- | -------- |
 |  PIC32MK MCJ Curiosity Pro Board | LED2 |
+|  PIC32MK MCA Curiosity Pro Board | LED1 |
 |||
