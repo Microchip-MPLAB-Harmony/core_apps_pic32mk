@@ -13,7 +13,7 @@ This example application shows how to use the I2C driver in synchronous mode to 
 
 ## Description
 
-This example uses the I2C driver in synchronous mode to communicate with the EEPROM to perform write and read operations in Bare-Metal environment. This application uses I2C driver to read and write data from an AT24CM02 EEPROM device.
+This example uses the I2C driver in synchronous mode to communicate with the EEPROM to perform write and read operations in FreeRTOS environment. This application uses I2C driver to read and write data from an AT24CM02 EEPROM device.
 
 ## Downloading and building the application
 
@@ -28,6 +28,7 @@ To build the application, refer to the following table and open the project usin
 | ----------------- | ---------------------------------------------- |
 | pic32mk_mcj_curiosity_pro_freertos.X | MPLABX project for PIC32MK MCJ Curiosity Pro Board |
 | pic32mk_mcm_curiosity_pro_freertos.X | MPLABX project for PIC32MK MCM Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro_freertos.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
 |||
 
 ## Setting up the hardware
@@ -38,6 +39,7 @@ The following table shows the target hardware for the application projects.
 |:---------|:---------:|
 | pic32mk_mcm_curiosity_pro_freertos.X | PIC32MK MCM Curiosity Pro Board |
 | pic32mk_mcj_curiosity_pro_freertos.X | PIC32MK MCJ Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro_freertos.X | PIC32MK MCA Curiosity Pro Board |
 |||
 
 - To run the demo, the following additional hardware are required:
@@ -54,6 +56,12 @@ The following table shows the target hardware for the application projects.
 - Connect a micro USB cable to the USB DEBUG port J500
 - Install the [EEPROM 3 Click](https://www.mikroe.com/eeprom-3-click) board on to the mikroBUS socket J300 of PIC32MK MCM Curiosity Pro Development Board
 
+### Setting up PIC32MK MCA Curiosity Pro Board
+
+- Connect a micro USB cable to the USB DEBUG port
+- Install the [EEPROM 3 Click](https://www.mikroe.com/eeprom-3-click) board on to the mikroBUS socket of PIC32MK MCA Curiosity Pro Development Board
+
+
 ## Running the Application
 
 1. Build and program the application using its IDE
@@ -65,4 +73,5 @@ Refer to the following table for LED name:
 | ----- | -------- |
 |  PIC32MK MCJ Curiosity Pro Board | LED2 |
 |  PIC32MK MCM Curiosity Pro Board | LED2 |
+|  PIC32MK MCA Curiosity Pro Board | LED1 |
 |||
