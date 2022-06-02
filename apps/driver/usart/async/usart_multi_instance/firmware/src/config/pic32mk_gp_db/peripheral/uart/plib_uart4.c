@@ -133,10 +133,8 @@ bool UART4_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
 {
     bool status = false;
     uint32_t baud;
-    int32_t brgValHigh = 0;
-    int32_t brgValLow = 0;
-    uint32_t brgVal = 0;
-    uint32_t uartMode;
+    bool brgh = 1;
+    int32_t uxbrg = 0;
 
     if((uart4Obj.rxBusyStatus == true) || (uart4Obj.txBusyStatus == true))
     {
@@ -148,13 +146,10 @@ bool UART4_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
     {
         baud = setup->baudRate;
 
-        if (baud == 0)
+        if ((baud == 0) || ((setup->dataWidth == UART_DATA_9_BIT) && (setup->parity != UART_PARITY_NONE)))
         {
             return status;
         }
-
-        /* Turn OFF UART4 */
-        U4MODECLR = _U4MODE_ON_MASK;
 
         if(srcClkFreq == 0)
         {
@@ -162,54 +157,40 @@ bool UART4_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
         }
 
         /* Calculate BRG value */
-        brgValLow = (((srcClkFreq >> 4) + (baud >> 1)) / baud ) - 1;
-        brgValHigh = (((srcClkFreq >> 2) + (baud >> 1)) / baud ) - 1;
-
-        /* Check if the baud value can be set with low baud settings */
-        if((brgValLow >= 0) && (brgValLow <= UINT16_MAX))
+        if (brgh == 0)
         {
-            brgVal =  brgValLow;
-            U4MODECLR = _U4MODE_BRGH_MASK;
-        }
-        else if ((brgValHigh >= 0) && (brgValHigh <= UINT16_MAX))
-        {
-            brgVal = brgValHigh;
-            U4MODESET = _U4MODE_BRGH_MASK;
+            uxbrg = (((srcClkFreq >> 4) + (baud >> 1)) / baud ) - 1;
         }
         else
+        {
+            uxbrg = (((srcClkFreq >> 2) + (baud >> 1)) / baud ) - 1;
+        }
+
+        /* Check if the baud value can be set with low baud settings */
+        if((uxbrg < 0) || (uxbrg > UINT16_MAX))
         {
             return status;
         }
 
+        /* Turn OFF UART4 */
+        U4MODECLR = _U4MODE_ON_MASK;
+
         if(setup->dataWidth == UART_DATA_9_BIT)
         {
-            if(setup->parity != UART_PARITY_NONE)
-            {
-               return status;
-            }
-            else
-            {
-               /* Configure UART4 mode */
-               uartMode = U4MODE;
-               uartMode &= ~_U4MODE_PDSEL_MASK;
-               U4MODE = uartMode | setup->dataWidth;
-            }
+            /* Configure UART4 mode */
+            U4MODE = (U4MODE & (~_U4MODE_PDSEL_MASK)) | setup->dataWidth;
         }
         else
         {
             /* Configure UART4 mode */
-            uartMode = U4MODE;
-            uartMode &= ~_U4MODE_PDSEL_MASK;
-            U4MODE = uartMode | setup->parity ;
+            U4MODE = (U4MODE & (~_U4MODE_PDSEL_MASK)) | setup->parity;
         }
 
         /* Configure UART4 mode */
-        uartMode = U4MODE;
-        uartMode &= ~_U4MODE_STSEL_MASK;
-        U4MODE = uartMode | setup->stopBits ;
+        U4MODE = (U4MODE & (~_U4MODE_STSEL_MASK)) | setup->stopBits;
 
         /* Configure UART4 Baud Rate */
-        U4BRG = brgVal;
+        U4BRG = uxbrg;
 
         U4MODESET = _U4MODE_ON_MASK;
 
@@ -397,6 +378,9 @@ void UART4_RX_InterruptHandler (void)
 {
     if(uart4Obj.rxBusyStatus == true)
     {
+        /* Clear UART4 RX Interrupt flag */
+        IFS2CLR = _IFS2_U4RXIF_MASK;
+
         while((_U4STA_URXDA_MASK == (U4STA & _U4STA_URXDA_MASK)) && (uart4Obj.rxSize > uart4Obj.rxProcessedSize) )
         {
             if (( U4MODE & (_U4MODE_PDSEL0_MASK | _U4MODE_PDSEL1_MASK)) == (_U4MODE_PDSEL0_MASK | _U4MODE_PDSEL1_MASK))
@@ -410,9 +394,6 @@ void UART4_RX_InterruptHandler (void)
                 uart4Obj.rxBuffer[uart4Obj.rxProcessedSize++] = (uint8_t )(U4RXREG);
             }
         }
-
-        /* Clear UART4 RX Interrupt flag */
-        IFS2CLR = _IFS2_U4RXIF_MASK;
 
 
         /* Check if the buffer is done */
@@ -443,6 +424,9 @@ void UART4_TX_InterruptHandler (void)
 {
     if(uart4Obj.txBusyStatus == true)
     {
+        /* Clear UART4TX Interrupt flag */
+        IFS2CLR = _IFS2_U4TXIF_MASK;
+
         while((!(U4STA & _U4STA_UTXBF_MASK)) && (uart4Obj.txSize > uart4Obj.txProcessedSize) )
         {
             if (( U4MODE & (_U4MODE_PDSEL0_MASK | _U4MODE_PDSEL1_MASK)) == (_U4MODE_PDSEL0_MASK | _U4MODE_PDSEL1_MASK))
@@ -457,8 +441,6 @@ void UART4_TX_InterruptHandler (void)
             }
         }
 
-        /* Clear UART4TX Interrupt flag */
-        IFS2CLR = _IFS2_U4TXIF_MASK;
 
         /* Check if the buffer is done */
         if(uart4Obj.txProcessedSize >= uart4Obj.txSize)
@@ -482,3 +464,15 @@ void UART4_TX_InterruptHandler (void)
 }
 
 
+
+bool UART4_TransmitComplete( void )
+{
+    bool transmitComplete = false;
+
+    if((U4STA & _U4STA_TRMT_MASK))
+    {
+        transmitComplete = true;
+    }
+
+    return transmitComplete;
+}
