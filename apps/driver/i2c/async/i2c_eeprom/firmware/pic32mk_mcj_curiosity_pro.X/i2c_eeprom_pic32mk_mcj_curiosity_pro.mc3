@@ -1,4 +1,4 @@
-<config configName="pic32mk_mcj_curiosity_pro" projectName="i2c_eeprom_pic32mk_mcj_curiosity_pro" configVersion="1.1" device="PIC32MK0512MCJ064" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.2.3">
+<config configName="pic32mk_mcj_curiosity_pro" projectName="i2c_eeprom_pic32mk_mcj_curiosity_pro" configVersion="1.1" device="PIC32MK0512MCJ064" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.3">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -31,7 +31,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.1"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1617,11 +1617,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\definitions.h</file>
-         <hash>dceaf8090101a14794f930b91ad5347bbd97466af187a040d469d57aa49732b7</hash>
+         <hash>36dc95aff64261d321b09b142d6cb92d42a74aae5d7dfd40a748a2d4ba11e333</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\evic\plib_evic.c</file>
-         <hash>fed39eb21f71bf36e200e12c0b2a924331d189578f6bdcfc2ee98c57d434ad7d</hash>
+         <hash>cc1e26d59d332629f6f549b0e8be5f81d3091c96516a8a690b56ece6945d5c7b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\interrupts.h</file>
@@ -1637,11 +1637,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\p32MK0512MCJ064.ld</file>
-         <hash>0dd550021b19c3b80d71a109ba87fc62f3f96d0cbfabb67ae7e863f2d5fa2010</hash>
+         <hash>977bc22435921cb3d283015ce45e21b42dcc233c39364a13e74496daad8f90c5</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\driver\i2c\drv_i2c.h</file>
-         <hash>c17a0a4f6904f2226706c71821a1dac31171a701181677c9bb512049e20b71a2</hash>
+         <hash>1add02b0380f67be5dc9707f01b290af08eccc0957775327f44a8c1afc823410</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\clk\plib_clk.h</file>
@@ -1681,7 +1681,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\bsp\bsp.h</file>
-         <hash>5f5b51b7343c0a21a4eb14e171f510dcfc6cb9e47c62faa6b10b3f6915d86dc7</hash>
+         <hash>42cb658168010f58eeb8770ebfd6f21ccb326b2f6817625aa522b8d79cd11fd6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\user.h</file>
@@ -1713,15 +1713,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\initialization.c</file>
-         <hash>ba6c9681c8c6123a3e32f609ecb63d78395e7099a0d6deb36bfd382b59c34ac0</hash>
+         <hash>b52ab8f2f99d63a7baf79688de7c1775a65a67c4aee98a7093ce85c784e23d87</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\system\debug\sys_debug.h</file>
-         <hash>970de73fb9806906b5429168c66ab403309d8a9cad46febab875a5e6d071525e</hash>
+         <hash>16fbc4bbf026e4713e9b835b1511411e053aaf92ab7d6a000638630576fe92b3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\gpio\plib_gpio.h</file>
-         <hash>b0ba84d33cb93f9e00450c697add718eb6d15935b071f7e7b3a5cc87716b8194</hash>
+         <hash>bb0122cf94de2a9055f750821841be0ec60b897babecf693c76b769777c59dc4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\interrupts.c</file>
@@ -1729,27 +1729,27 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\stdio\xc32_monitor.c</file>
-         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\i2c\master\plib_i2c2_master.c</file>
-         <hash>dde6797835f8e448838db90f90884788f875c868e3cf44f6c1a425095f63c095</hash>
+         <hash>0ff03dca7606e8fd9567e00780ef532ae040f27ddd0f2b89d10193c7ede73c77</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\i2c\master\plib_i2c2_master.h</file>
-         <hash>80bc7c59795127145c2530ac56c192005c4c951924a211ec4339e5b643c2a6b7</hash>
+         <hash>54b41d364e7a205020f560ca2ab2cb125aa11f8a6f5910337ad3cf510a03c9a7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\gpio\plib_gpio.c</file>
-         <hash>9ecfd7212c0dcc984a6e0d88839e1b3efa43179209cbeae48c621ccc71f2c490</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mcj_curiosity_pro\driver\i2c\src\drv_i2c.c</file>
-         <hash>066e757e8d736e8d60301a755a5d0a051cf38ff7c98a23bb050c66894838837c</hash>
+         <hash>7afb45a98566022fd8ad0e18adc747605bf1b151fae2835e36c68e7bc395c5a2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\system\system_common.h</file>
          <hash>0dbf2f60b29c97426e70187bc59c652ab5a355f51cfbe3f195ff1c8c6c0b1602</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mcj_curiosity_pro\driver\i2c\src\drv_i2c.c</file>
+         <hash>bb72b155e2ca991c75bd5e29a85154ad3e1910e2fe5c016a13e53154c4585473</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\driver\i2c\src\drv_i2c_local.h</file>
@@ -1769,7 +1769,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\driver\i2c\drv_i2c_definitions.h</file>
-         <hash>48e93b446c00e2ff05fa909dff3eccb8aad1051467c4137e407d37afc4b40ab0</hash>
+         <hash>73ed094aba8f1de3ae1497ff414474f02588381d94801f6beac411f8c7f9b329</hash>
       </entry>
       <entry>
          <file>..\src\app.c</file>
