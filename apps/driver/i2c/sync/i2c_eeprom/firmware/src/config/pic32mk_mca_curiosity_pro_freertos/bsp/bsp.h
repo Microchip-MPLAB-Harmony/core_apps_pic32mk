@@ -61,14 +61,14 @@
 // *****************************************************************************
 // *****************************************************************************
 /*** LED Macros for LED1 ***/
-#define LED1_Toggle() (LATAINV = (1<<10))
-#define LED1_Get() ((PORTA >> 10) & 0x1)
-#define LED1_On() (LATACLR = (1<<10))
-#define LED1_Off() (LATASET = (1<<10))
+#define LED1_Toggle() (LATAINV = (1U<<10))
+#define LED1_Get() ((PORTA >> 10) & 0x1U)
+#define LED1_On() (LATACLR = (1U<<10))
+#define LED1_Off() (LATASET = (1U<<10))
 /*** SWITCH Macros for SWITCH ***/
-#define SWITCH_Get() ((PORTA >> 7) & 0x1)
-#define SWITCH_STATE_PRESSED 0
-#define SWITCH_STATE_RELEASED 1
+#define SWITCH_Get() ((PORTA >> 7) & 0x1U)
+#define SWITCH_STATE_PRESSED 0U
+#define SWITCH_STATE_RELEASED 1U
 
 
 
