@@ -145,7 +145,7 @@ const DRV_AT24_INIT drvAT24InitData =
     .i2cPlib = &drvAT24PlibAPI,
 
     /* 7-bit I2C Slave address */
-    .slaveAddress = 0x57,
+    .slaveAddress = 0x54,
 
     /* EEPROM Page Size in bytes */
     .pageSize = DRV_AT24_EEPROM_PAGE_SIZE,

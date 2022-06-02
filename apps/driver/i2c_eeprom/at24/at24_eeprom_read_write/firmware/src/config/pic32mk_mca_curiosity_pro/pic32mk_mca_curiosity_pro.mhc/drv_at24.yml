@@ -11,6 +11,34 @@ children:
       children:
       - type: Dynamic
         attributes: {id: drv_at24, value: I2C2}
+  - type: Integer
+    attributes: {id: EEPROM_ADDR_LEN}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: drv_at24, value: '2'}
+  - type: Integer
+    attributes: {id: EEPROM_FLASH_SIZE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '262144'}
+  - type: Integer
+    attributes: {id: EEPROM_PAGE_SIZE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '256'}
+  - type: Hex
+    attributes: {id: I2C_EEPROM_ADDDRESS}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '84'}
 - type: Attachments
   children:
   - type: DirectDependency
