@@ -1,4 +1,4 @@
-<config configName="pic32mk_mcj_curiosity_pro" projectName="spi_multi_slave_pic32mk_mcj_curiosity_pro" configVersion="1.1" device="PIC32MK0512MCJ064" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.2.3">
+<config configName="pic32mk_mcj_curiosity_pro" projectName="spi_multi_slave_pic32mk_mcj_curiosity_pro" configVersion="1.1" device="PIC32MK0512MCJ064" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.3">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -31,7 +31,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.1"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2912,7 +2912,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\evic\plib_evic.c</file>
-         <hash>6f64610323f7bb93796a5b6d1c3a970737055322972ce1c9e2def04928f75bf6</hash>
+         <hash>5d50151b759ca069c05d57408cb8f6d321c9742a4691cb164c3a4feed63b8664</hash>
       </entry>
       <entry>
          <file>..\src\app_monitor.c</file>
@@ -2932,7 +2932,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\p32MK0512MCJ064.ld</file>
-         <hash>0dd550021b19c3b80d71a109ba87fc62f3f96d0cbfabb67ae7e863f2d5fa2010</hash>
+         <hash>977bc22435921cb3d283015ce45e21b42dcc233c39364a13e74496daad8f90c5</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\clk\plib_clk.h</file>
@@ -2984,11 +2984,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\initialization.c</file>
-         <hash>7bde6355fd26474f983e8680d808e20917fa16fb405574821e387c39cf5b54fc</hash>
+         <hash>7674f487188436b4dac18f4c49b6d193bd96b9667023b008a62d094570cc8262</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\system\debug\sys_debug.h</file>
-         <hash>970de73fb9806906b5429168c66ab403309d8a9cad46febab875a5e6d071525e</hash>
+         <hash>16fbc4bbf026e4713e9b835b1511411e053aaf92ab7d6a000638630576fe92b3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\spi\spi_master\plib_spi_master_common.h</file>
@@ -2996,7 +2996,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\driver\spi\drv_spi_definitions.h</file>
-         <hash>b86418a82068a6e706ca20c7452e9af1f3485b3bef6d083888507868d4bc9591</hash>
+         <hash>c0bb59cb4e0db78819626219e773cea55748a8207b9afc31617e9af24662650d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\interrupts.c</file>
@@ -3004,7 +3004,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\stdio\xc32_monitor.c</file>
-         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
       </entry>
       <entry>
          <file>..\src\app_eeprom1.c</file>
@@ -3024,7 +3024,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\driver\spi\drv_spi.h</file>
-         <hash>dfd0f628815dc935e8594112dc1a2acb17e9e2c50bf847744e1d54398768b274</hash>
+         <hash>aed15b9971d20ddad5624af0d417eccb3d9acf31326b0d9ededffabb34c3ed15</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\definitions.h</file>
@@ -3064,7 +3064,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\bsp\bsp.h</file>
-         <hash>5f5b51b7343c0a21a4eb14e171f510dcfc6cb9e47c62faa6b10b3f6915d86dc7</hash>
+         <hash>42cb658168010f58eeb8770ebfd6f21ccb326b2f6817625aa522b8d79cd11fd6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\dmac\plib_dmac.h</file>
@@ -3072,7 +3072,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\driver\spi\src\drv_spi.c</file>
-         <hash>d9c3cf022c9e73300dba9fc7f1f55cd8ea3529e9e52d42abe7c592eff9bfc851</hash>
+         <hash>44391c0533ac4fefe876347562c73669bc92992acf0d404a8bdb73d4fa933cfc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\osal\osal_impl_basic.h</file>
@@ -3080,7 +3080,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\gpio\plib_gpio.h</file>
-         <hash>2ed7f09f1851c43ce3e04316a8565a8b17360a5e8449a81fe7bd28e7cb1e5ebd</hash>
+         <hash>06daeaa74328eb7f8112e2ea1902dbbcff71b5b181bf73dbd63baeabf7926f5f</hash>
       </entry>
       <entry>
          <file>..\src\app_eeprom2.c</file>
@@ -3096,7 +3096,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\gpio\plib_gpio.c</file>
-         <hash>8330454b01c9704be05823f3ae974fd2f9dc13a156bdfdd5c4118e7553f36d9e</hash>
+         <hash>db2c8b569a825f20c3f804a071557472a2ad05b6db164fcdb848f646d192b82b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\osal\osal.h</file>
