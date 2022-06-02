@@ -107,4 +107,4 @@ Refer to the following table for LED name:
 |  PIC32MK MCM Curiosity Pro Board | LED2 |
 |  PIC32MK MCA Curiosity Pro Board | LED1 |
 
-|||
+
