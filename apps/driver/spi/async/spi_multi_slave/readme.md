@@ -53,7 +53,7 @@ The following table shows the target hardware for the application projects.
 ### Setting up PIC32MK MCA Curiosity Pro Board
 
 - Connect micro USB cable to the 'Debug USB' connector(J1) on the board to the computer
-- Install one [EEPROM 3 Click](https://www.mikroe.com/eeprom-3-click) board on to the mikroBUS socket of PIC32MK MCA Curiosity Pro Development Board
+- Install one [EEPROM 4 Click](https://www.mikroe.com/eeprom-4-click) board on to the mikroBUS socket of PIC32MK MCA Curiosity Pro Development Board
 - Install another [EEPROM 4 Click](https://www.mikroe.com/eeprom-4-click) board on to the [mikroBUS Xplained Pro](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) board
 - Connect [mikroBUS Xplained Pro](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) board on to the "EXT1" (J501) header of the PIC32MK MCA Curiosity Pro Development Board
 
