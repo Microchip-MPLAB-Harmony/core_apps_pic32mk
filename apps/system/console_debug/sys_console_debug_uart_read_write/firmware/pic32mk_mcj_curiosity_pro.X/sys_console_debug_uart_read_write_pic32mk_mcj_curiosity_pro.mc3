@@ -1,4 +1,4 @@
-<config configName="pic32mk_mcj_curiosity_pro" projectName="sys_console_debug_uart_read_write_pic32mk_mcj_curiosity_pro" configVersion="1.1" device="PIC32MK0512MCJ064" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.2.3">
+<config configName="pic32mk_mcj_curiosity_pro" projectName="sys_console_debug_uart_read_write_pic32mk_mcj_curiosity_pro" configVersion="1.1" device="PIC32MK0512MCJ064" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.3">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -35,7 +35,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.1"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1780,19 +1780,6 @@
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_BRGH_MODE_COMMENT"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
-  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_BRGH_MODE_COMMENT&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;text&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;***&amp;amp;#160;High&amp;amp;#160;Speed&amp;amp;#160;mode&amp;amp;#160;4x&amp;amp;#160;baud&amp;amp;#160;clock&amp;amp;#160;enabled&amp;amp;#160;(BRGH&amp;amp;#160;=&amp;amp;#160;1)&amp;amp;#160;***&lt;/Value&gt;
-      &lt;/String&gt;
-    &lt;/Attributes&gt;
-  &lt;/uart1&gt;
-&lt;/uart1&gt;
-</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_CLOCK_FREQ"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
   &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_CLOCK_FREQ&quot;&gt;
@@ -1961,7 +1948,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\evic\plib_evic.c</file>
-         <hash>23d26d604cf31e49243d42ccec8d09c0fff682d6c53182d8f9977eb16d96454e</hash>
+         <hash>8429b8c06f16b370cc74b3b04c88142c5e315cf4eaf2c7eb6c78c22268e0ed32</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\interrupts.h</file>
@@ -1981,23 +1968,23 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\p32MK0512MCJ064.ld</file>
-         <hash>0dd550021b19c3b80d71a109ba87fc62f3f96d0cbfabb67ae7e863f2d5fa2010</hash>
+         <hash>977bc22435921cb3d283015ce45e21b42dcc233c39364a13e74496daad8f90c5</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\uart\plib_uart1.h</file>
-         <hash>dc2e583e6fa06363b20dd5d99ca8206b5696475f0a05479ba869d39e3e4ab9d1</hash>
+         <hash>1a0bafa88e6cdfd4f373b50fd2dd921b537c572d2318efe27f3dbc212dcfe05a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\clk\plib_clk.h</file>
          <hash>aeb73e24e5a518024b1c3f7dce953a5cbacead08f55e80ae465fc8d2e522e477</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_mcj_curiosity_pro\system\int\sys_int_mapping.h</file>
-         <hash>771b853250bfb05ceac0f525749007ca1d4478e660c13f6a7b7e8fe28eefcf75</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\system\debug\src\sys_debug_local.h</file>
          <hash>d14855e54d4929ec6c9c3ea1e9de3fdc1711bb278fc27ab39079e9f16ecc87d5</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mcj_curiosity_pro\system\int\sys_int_mapping.h</file>
+         <hash>771b853250bfb05ceac0f525749007ca1d4478e660c13f6a7b7e8fe28eefcf75</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\system\console\src\sys_console.c</file>
@@ -2017,7 +2004,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\uart\plib_uart1.c</file>
-         <hash>75fecdf8706240acc752188ccc59f21a957622adec4d9e4411c2e47eb2bcb8e1</hash>
+         <hash>d284e558ebc72162f5f2055f9cf64ee17677319142a29ec46364bd5254f6887f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\system\system_module.h</file>
@@ -2037,7 +2024,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\bsp\bsp.h</file>
-         <hash>5f5b51b7343c0a21a4eb14e171f510dcfc6cb9e47c62faa6b10b3f6915d86dc7</hash>
+         <hash>42cb658168010f58eeb8770ebfd6f21ccb326b2f6817625aa522b8d79cd11fd6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\user.h</file>
@@ -2077,11 +2064,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\system\debug\sys_debug.h</file>
-         <hash>970de73fb9806906b5429168c66ab403309d8a9cad46febab875a5e6d071525e</hash>
+         <hash>16fbc4bbf026e4713e9b835b1511411e053aaf92ab7d6a000638630576fe92b3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\gpio\plib_gpio.h</file>
-         <hash>b0ba84d33cb93f9e00450c697add718eb6d15935b071f7e7b3a5cc87716b8194</hash>
+         <hash>bb0122cf94de2a9055f750821841be0ec60b897babecf693c76b769777c59dc4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\system\console\src\sys_console_uart.h</file>
@@ -2093,11 +2080,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\stdio\xc32_monitor.c</file>
-         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\system\console\sys_console.h</file>
-         <hash>f4a1d6e28347f9d6dcc091dc65032ef01f9b0651bc710001ba4b2eb4af29f4bb</hash>
+         <hash>e8a97986345fb2c80389834b113384eba523837ee43f7798d9b56be630a6e7b3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\system\debug\src\sys_debug.c</file>
@@ -2105,7 +2092,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\peripheral\gpio\plib_gpio.c</file>
-         <hash>a71207d1afd22fff0010bf8a7a3e89644175dd722fa7d845bfb8537a08191878</hash>
+         <hash>9b1d81751a3575f2e34972213865c5f32334fcf2ffdc885987f2c3f380c38206</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcj_curiosity_pro\system\system_common.h</file>
