@@ -1,4 +1,4 @@
-<config configName="pic32mk_gp_db" projectName="async_usart_echo_pic32mk_gp_db" configVersion="1.1" device="PIC32MK1024GPE100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.2.4">
+<config configName="pic32mk_gp_db" projectName="async_usart_echo_pic32mk_gp_db" configVersion="1.1" device="PIC32MK1024GPE100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.3">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -31,7 +31,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.1"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -3590,19 +3590,6 @@
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart6" name="UART_BRGH_MODE_COMMENT"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart6&gt;
-  &lt;uart6 dnOrder=&quot;0&quot; id=&quot;UART_BRGH_MODE_COMMENT&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;text&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;***&amp;amp;#160;High&amp;amp;#160;Speed&amp;amp;#160;mode&amp;amp;#160;4x&amp;amp;#160;baud&amp;amp;#160;clock&amp;amp;#160;enabled&amp;amp;#160;(BRGH&amp;amp;#160;=&amp;amp;#160;1)&amp;amp;#160;***&lt;/Value&gt;
-      &lt;/String&gt;
-    &lt;/Attributes&gt;
-  &lt;/uart6&gt;
-&lt;/uart6&gt;
-</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart6" name="UART_CLOCK_FREQ"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart6&gt;
   &lt;uart6 dnOrder=&quot;0&quot; id=&quot;UART_CLOCK_FREQ&quot;&gt;
@@ -3666,7 +3653,7 @@
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.c</file>
-         <hash>18c99ed0e160b77b3f115265d8ddc6a17e0ad755206ed0e02f116522d3906fe2</hash>
+         <hash>68b23fcbeb0b2bb202595313bbdb0ff4e101f015e822b36520f9b43e57e653be</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\system\int\sys_int_mapping.h</file>
@@ -3682,11 +3669,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usart\drv_usart.h</file>
-         <hash>60d1ab81b5558b710e14241f92d60171c651716a2363c8a74f9e38e2bedd3656</hash>
+         <hash>38c9b2141416ac19cc67edf851ed6ab381d5c19c8878c8460df6a3190703dba7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\p32MK1024GPE100.ld</file>
-         <hash>db501f83a4085da72f4f37374ab29b766e74ac8e1f2805c37307b9b3d5a15155</hash>
+         <hash>dc80ba3f4d685c9cfdfd61e3e4fd458211b17013eca88285e8e6894a8f2ebf8e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\configuration.h</file>
@@ -3694,7 +3681,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\definitions.h</file>
-         <hash>79ce698044914142778343081432ac4fb36c7bb2ba678892318c69e953cc49fb</hash>
+         <hash>3f43a6602afab4b11a6d48cd2ad3ad3bb4610c54d63f4e8613cdbe2b7ef59a1f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usart\src\drv_usart_local.h</file>
@@ -3718,7 +3705,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\stdio\xc32_monitor.c</file>
-         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\system\dma\sys_dma.c</file>
@@ -3733,12 +3720,12 @@
          <hash>451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_gp_db\osal\osal.h</file>
-         <hash>d42702188d00d3e1d7219d7eef030485896bf8b5ebe55318656e82f0fbb89788</hash>
+         <file>..\src\config\pic32mk_gp_db\peripheral\uart\plib_uart6.c</file>
+         <hash>52096833c547ca511ba69e8a3cc42b707e02e37306be63f2a7ec95be6918a350</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_gp_db\peripheral\uart\plib_uart6.c</file>
-         <hash>91ebcac10199d9844c9275e8361ac5361c04c6670ff74c55ddb8f23624294f53</hash>
+         <file>..\src\config\pic32mk_gp_db\osal\osal.h</file>
+         <hash>d42702188d00d3e1d7219d7eef030485896bf8b5ebe55318656e82f0fbb89788</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\osal\osal_definitions.h</file>
@@ -3761,12 +3748,12 @@
          <hash>5251c0624188e34c8e26cd32cefc5aacae91653cb67c6a2bebb022d9bb1e475d</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_gp_db\system\system.h</file>
-         <hash>2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55</hash>
+         <file>..\src\config\pic32mk_gp_db\peripheral\uart\plib_uart6.h</file>
+         <hash>0b8107f6c66dbde35eb85f536fa8af85f182e93dd2ce28557ded089b71fd10bf</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_gp_db\peripheral\uart\plib_uart6.h</file>
-         <hash>5b3d42b2fe5b0702930612f09ebb54d84e6f369900307682d3deb1cd45a22ef6</hash>
+         <file>..\src\config\pic32mk_gp_db\system\system.h</file>
+         <hash>2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\driver_common.h</file>
@@ -3794,7 +3781,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\evic\plib_evic.c</file>
-         <hash>1bc29a76e770ebf58a25b71aecf6928394d3b7aaeea8d4752ae5f1806bb7f5cd</hash>
+         <hash>a5ace2c465e18f565ff0c94bdaf548ed7646631a685a8321c6099910c2437c99</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\bsp\bsp.c</file>
@@ -3810,7 +3797,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\bsp\bsp.h</file>
-         <hash>0d62758435955a612ef4a43e24932d9d801ce48cae143cc0ae57135dd634df3f</hash>
+         <hash>170d3b14dab4e09ad3980436f082546da81e0a639ee94181a142cd60ef6d7726</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\interrupts.h</file>
@@ -3834,7 +3821,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.h</file>
-         <hash>15ea2461d7edacbf05de987115b0bd248d509a235df348d6a93c9feee725bcde</hash>
+         <hash>0e32805aa6433f463487977d8d301136f6ad0149dacd6c5d5fd8afe65276f0a2</hash>
       </entry>
       <entry>
          <file>..\src\app.c</file>
@@ -3842,7 +3829,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\system\debug\sys_debug.h</file>
-         <hash>970de73fb9806906b5429168c66ab403309d8a9cad46febab875a5e6d071525e</hash>
+         <hash>16fbc4bbf026e4713e9b835b1511411e053aaf92ab7d6a000638630576fe92b3</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
