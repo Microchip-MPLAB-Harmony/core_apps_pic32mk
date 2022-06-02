@@ -89,16 +89,6 @@ void _TASK3_MCJ_Tasks(  void *pvParameters  )
         TASK3_MCJ_Tasks();
     }
 }
-/* Handle for the TASK4_MCJ_Tasks. */
-TaskHandle_t xTASK4_MCJ_Tasks;
-
-void _TASK4_MCJ_Tasks(  void *pvParameters  )
-{   
-    while(1)
-    {
-        TASK4_MCJ_Tasks();
-    }
-}
 
 
 
@@ -151,14 +141,6 @@ void SYS_Tasks ( void )
                 NULL,
                 3,
                 &xTASK3_MCJ_Tasks);
-
-    /* Create OS Thread for TASK4_MCJ_Tasks. */
-    xTaskCreate((TaskFunction_t) _TASK4_MCJ_Tasks,
-                "TASK4_MCJ_Tasks",
-                1024,
-                NULL,
-                4,
-                &xTASK4_MCJ_Tasks);
 
 
 

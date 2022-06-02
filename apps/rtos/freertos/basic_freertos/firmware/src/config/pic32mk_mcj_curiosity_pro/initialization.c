@@ -185,7 +185,6 @@ void SYS_Initialize ( void* data )
     TASK1_MCJ_Initialize();
     TASK2_MCJ_Initialize();
     TASK3_MCJ_Initialize();
-    TASK4_MCJ_Initialize();
 
 
     EVIC_Initialize();
