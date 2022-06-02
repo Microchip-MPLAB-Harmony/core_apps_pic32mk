@@ -1,11 +1,11 @@
 files:
-- generatedChecksum: F58DB2348A0FCE945652B285010E5F8A
+- generatedChecksum: E4894B6355AF41AED546E4C6C20005C1
   logicalPath: FreeRTOS/Source
   name: FreeRTOS_tasks.c
   physicalPath: ../../third_party/rtos/FreeRTOS/Source
   security: NON_SECURE
   type: SOURCE
-  userChecksum: F58DB2348A0FCE945652B285010E5F8A
+  userChecksum: E4894B6355AF41AED546E4C6C20005C1
 - generatedChecksum: null
   logicalPath: ''
   name: app_client1.c
@@ -34,20 +34,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: D26088F21E3A03BD0AF1C72C387BDD81
-- generatedChecksum: 8ACE0DEBD82F6829438A4674565451FB
+- generatedChecksum: 4490B523D4D89767AF3FE31B825F7F6D
   logicalPath: FreeRTOS/Source
   name: croutine.c
   physicalPath: ../../third_party/rtos/FreeRTOS/Source
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 8ACE0DEBD82F6829438A4674565451FB
-- generatedChecksum: 90DC35244BD8F0B7A41B8A2F643F0EB2
+  userChecksum: 4490B523D4D89767AF3FE31B825F7F6D
+- generatedChecksum: AAC98092240A2D58ED67211A8329EE56
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos/driver/spi
   name: drv_spi.c
   physicalPath: driver/spi/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 90DC35244BD8F0B7A41B8A2F643F0EB2
+  userChecksum: AAC98092240A2D58ED67211A8329EE56
 - generatedChecksum: 0BF875A9C5C9E345F0D040CA603FE3C3
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos/driver/spi
   name: drv_spi_local.h
@@ -55,13 +55,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 0BF875A9C5C9E345F0D040CA603FE3C3
-- generatedChecksum: B3B5445B14BD9B6A35F1C5B995C9BBF7
+- generatedChecksum: 0E0E8AECB67046FEA847B359ACE7A1F6
   logicalPath: FreeRTOS/Source
   name: event_groups.c
   physicalPath: ../../third_party/rtos/FreeRTOS/Source
   security: NON_SECURE
   type: SOURCE
-  userChecksum: B3B5445B14BD9B6A35F1C5B995C9BBF7
+  userChecksum: 0E0E8AECB67046FEA847B359ACE7A1F6
 - generatedChecksum: 4BBDE3B7B0DAEE2CA5A8F519001D5BFF
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos
   name: exceptions.c
@@ -69,27 +69,27 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4BBDE3B7B0DAEE2CA5A8F519001D5BFF
-- generatedChecksum: B7DBFD6F500AAD4713403E985EB18EAE
+- generatedChecksum: CF89BE92AE72229779903C2E9A760455
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos
   name: freertos_hooks.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: B7DBFD6F500AAD4713403E985EB18EAE
-- generatedChecksum: 972E955D94A63BA89BF6ABD6AADB1023
+  userChecksum: CF89BE92AE72229779903C2E9A760455
+- generatedChecksum: 31CEE4650E24C72160696DF93B55B48D
   logicalPath: FreeRTOS/Source/portable/MemMang
   name: heap_1.c
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/portable/MemMang
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 972E955D94A63BA89BF6ABD6AADB1023
-- generatedChecksum: FD291B54B3168B299F330FE4E436611B
+  userChecksum: 31CEE4650E24C72160696DF93B55B48D
+- generatedChecksum: 24B0E7C71BBBEEF020DE9CD8034CB0B8
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: FD291B54B3168B299F330FE4E436611B
+  userChecksum: 24B0E7C71BBBEEF020DE9CD8034CB0B8
 - generatedChecksum: 79A5679A9393AC08D0C5B18851D1E2F4
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos
   name: interrupts.c
@@ -104,13 +104,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: CB0411B9B1FD9E7564DCE72F3F820A1E
-- generatedChecksum: 3FEE521CEF14928AE38E7FA9BF6D75E6
+- generatedChecksum: 47F98BAFD5D2A077AB529D10DB870AFF
   logicalPath: FreeRTOS/Source
   name: list.c
   physicalPath: ../../third_party/rtos/FreeRTOS/Source
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 3FEE521CEF14928AE38E7FA9BF6D75E6
+  userChecksum: 47F98BAFD5D2A077AB529D10DB870AFF
 - generatedChecksum: null
   logicalPath: ''
   name: main.c
@@ -146,13 +146,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 2525D0B78DCB81C59756481657C0D045
-- generatedChecksum: 7F701EA18D91E12B116955E7BD3EBB8C
+- generatedChecksum: 076A949EC13D0486F59555154B84797E
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 7F701EA18D91E12B116955E7BD3EBB8C
+  userChecksum: 076A949EC13D0486F59555154B84797E
 - generatedChecksum: DF9BC4CBEB9C001FF4192D7647A222F7
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos/peripheral/spi/spi_master
   name: plib_spi6_master.c
@@ -167,27 +167,27 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 0E851159CFF7B40028D295108F0F7474
-- generatedChecksum: 17FB1DE2D7DF3950AACC03B19F54459C
+- generatedChecksum: DF45E3DDDEC2F56707A9CBFBE9B8F3FD
   logicalPath: FreeRTOS/Source/portable/MPLAB/PIC32MK
   name: port_asm.S
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MK
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 17FB1DE2D7DF3950AACC03B19F54459C
-- generatedChecksum: 09041728D74A4E3A32C7D4EAA96C4EE7
+  userChecksum: DF45E3DDDEC2F56707A9CBFBE9B8F3FD
+- generatedChecksum: 13259EE43A731BF0F46EA946229027BF
   logicalPath: FreeRTOS/Source
   name: queue.c
   physicalPath: ../../third_party/rtos/FreeRTOS/Source
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 09041728D74A4E3A32C7D4EAA96C4EE7
-- generatedChecksum: D6CF30BDCE1A813D9ACF3905EBD6A871
+  userChecksum: 13259EE43A731BF0F46EA946229027BF
+- generatedChecksum: A9BDA97498BEA85049883F48FB1094A0
   logicalPath: FreeRTOS/Source
   name: stream_buffer.c
   physicalPath: ../../third_party/rtos/FreeRTOS/Source
   security: NON_SECURE
   type: SOURCE
-  userChecksum: D6CF30BDCE1A813D9ACF3905EBD6A871
+  userChecksum: A9BDA97498BEA85049883F48FB1094A0
 - generatedChecksum: 2E02308556447B0510575953A9E9DF6E
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos/system/dma
   name: sys_dma.c
@@ -209,41 +209,41 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: D40F372270AAFBDF261380D5F0BB7397
-- generatedChecksum: F1B86F6E1527FD59A8713B67564F2898
+- generatedChecksum: 2811D7C532CEFF995F8697FCED6A1C34
   logicalPath: FreeRTOS/Source
   name: timers.c
   physicalPath: ../../third_party/rtos/FreeRTOS/Source
   security: NON_SECURE
   type: SOURCE
-  userChecksum: F1B86F6E1527FD59A8713B67564F2898
-- generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
+  userChecksum: 2811D7C532CEFF995F8697FCED6A1C34
+- generatedChecksum: 71352EF41F6688AD8408E42970B50B66
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 7806B30ECAE0D18D08CD583D8775530D
-- generatedChecksum: AF3A8D8AA610E7DFD3E38DDAC5E42074
+  userChecksum: 71352EF41F6688AD8408E42970B50B66
+- generatedChecksum: 5E06C8C3B681B9398724569B7DC5AFB8
   logicalPath: FreeRTOS/Source/include
   name: FreeRTOS.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: AF3A8D8AA610E7DFD3E38DDAC5E42074
-- generatedChecksum: F0109AE554E31A855B9F27FAB53ACA68
+  userChecksum: 5E06C8C3B681B9398724569B7DC5AFB8
+- generatedChecksum: 8DF2A49E7B6CC941FA3776D48DD58736
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos
   name: FreeRTOSConfig.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: F0109AE554E31A855B9F27FAB53ACA68
-- generatedChecksum: 774011E09B9B257B4F572704E6AB9713
+  userChecksum: 8DF2A49E7B6CC941FA3776D48DD58736
+- generatedChecksum: E44F224CDF5B12B127F4CF2B074AD35D
   logicalPath: FreeRTOS/Source/portable/MPLAB/PIC32MK
   name: ISR_Support.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MK
   security: NON_SECURE
   type: HEADER
-  userChecksum: 774011E09B9B257B4F572704E6AB9713
+  userChecksum: E44F224CDF5B12B127F4CF2B074AD35D
 - generatedChecksum: null
   logicalPath: ''
   name: app_client1.h
@@ -265,13 +265,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: 60CCF2FCB84A0FA9AA8C1607725D47A4
+- generatedChecksum: 5D89DFD3C9769D1183177FB058F59B0D
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos/bsp
   name: bsp.h
   physicalPath: bsp
   security: NON_SECURE
   type: HEADER
-  userChecksum: 60CCF2FCB84A0FA9AA8C1607725D47A4
+  userChecksum: 5D89DFD3C9769D1183177FB058F59B0D
 - generatedChecksum: 25FEE3719E59B9C0377410898A5BF6A0
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos
   name: configuration.h
@@ -279,13 +279,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 25FEE3719E59B9C0377410898A5BF6A0
-- generatedChecksum: 48B661D8C967C6BC397001F10FB43D1D
+- generatedChecksum: 4B11D1A616E95BDD37123685C8434FCF
   logicalPath: FreeRTOS/Source/include
   name: croutine.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 48B661D8C967C6BC397001F10FB43D1D
+  userChecksum: 4B11D1A616E95BDD37123685C8434FCF
 - generatedChecksum: 1A503AF2FB9584A9F35EDA0DF8827102
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos
   name: definitions.h
@@ -293,13 +293,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 1A503AF2FB9584A9F35EDA0DF8827102
-- generatedChecksum: 1EA4EDD5EA90F43EC407DE32441159A9
+- generatedChecksum: ACB7AD12FD525895ABA47C26F4F9A683
   logicalPath: FreeRTOS/Source/include
   name: deprecated_definitions.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1EA4EDD5EA90F43EC407DE32441159A9
+  userChecksum: ACB7AD12FD525895ABA47C26F4F9A683
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos
   name: device.h
@@ -321,27 +321,27 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: CC7DFCC51CD25171A3E400E18969354F
-- generatedChecksum: F454D5E0E6162B53958549B1D524C549
+- generatedChecksum: 9F75B6689BFA73CB5D96A71849B200F5
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos/driver/spi
   name: drv_spi.h
   physicalPath: driver/spi
   security: NON_SECURE
   type: HEADER
-  userChecksum: F454D5E0E6162B53958549B1D524C549
-- generatedChecksum: 94A444378C899A49D03E2B5BF5E99A44
+  userChecksum: 9F75B6689BFA73CB5D96A71849B200F5
+- generatedChecksum: B043CB7CEA23BE7EB7754A45F5D8C83D
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos/driver/spi
   name: drv_spi_definitions.h
   physicalPath: driver/spi
   security: NON_SECURE
   type: HEADER
-  userChecksum: 94A444378C899A49D03E2B5BF5E99A44
-- generatedChecksum: B1D1D455E111FA70C46AD40562D78CE2
+  userChecksum: B043CB7CEA23BE7EB7754A45F5D8C83D
+- generatedChecksum: DE52B71A2D274138117243B700F40B11
   logicalPath: FreeRTOS/Source/include
   name: event_groups.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: B1D1D455E111FA70C46AD40562D78CE2
+  userChecksum: DE52B71A2D274138117243B700F40B11
 - generatedChecksum: 4CF4A86296482D5331331BA301C20BB2
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos
   name: interrupts.h
@@ -349,34 +349,34 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 4CF4A86296482D5331331BA301C20BB2
-- generatedChecksum: FE17D325A06479D956285C5438994B83
+- generatedChecksum: 58875A2FBF6B0502B6D3B8B5C47F3815
   logicalPath: FreeRTOS/Source/include
   name: list.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: FE17D325A06479D956285C5438994B83
-- generatedChecksum: DDE2C9D46642D120A0202AC851E1A777
+  userChecksum: 58875A2FBF6B0502B6D3B8B5C47F3815
+- generatedChecksum: 5D9D0A05D32C97E2E625020E1795C7F1
   logicalPath: FreeRTOS/Source/include
   name: message_buffer.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: DDE2C9D46642D120A0202AC851E1A777
-- generatedChecksum: 2D674B8B1FCF07504AF90FA5CE2F9A23
+  userChecksum: 5D9D0A05D32C97E2E625020E1795C7F1
+- generatedChecksum: A34AAAD9F0BD596E8FF78D86FD64F869
   logicalPath: FreeRTOS/Source/include
   name: mpu_prototypes.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2D674B8B1FCF07504AF90FA5CE2F9A23
-- generatedChecksum: 953D372D8F7991D4F86AD4ABD42AE4CE
+  userChecksum: A34AAAD9F0BD596E8FF78D86FD64F869
+- generatedChecksum: 2ECEDD5114F296955777187904C449C7
   logicalPath: FreeRTOS/Source/include
   name: mpu_wrappers.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 953D372D8F7991D4F86AD4ABD42AE4CE
+  userChecksum: 2ECEDD5114F296955777187904C449C7
 - generatedChecksum: F0AD88762263B7CB89B02AB4F5876059
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos/osal
   name: osal.h
@@ -419,13 +419,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 4D592E1C42727324FE2F5EB681F6C5AA
-- generatedChecksum: C4180F95143D3C21FC2DA80303E78FB0
+- generatedChecksum: 8E0EB1AA5C247DEDEDEEAD8C8D6CAFE6
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: C4180F95143D3C21FC2DA80303E78FB0
+  userChecksum: 8E0EB1AA5C247DEDEDEEAD8C8D6CAFE6
 - generatedChecksum: 0C75166C5BE75E8E7408EC9C421BDBF7
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos/peripheral/spi/spi_master
   name: plib_spi6_master.h
@@ -440,69 +440,69 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: CFA758C8B7258190473EF7C60C4BA4E9
-- generatedChecksum: 5A686FF678CBFBB4A1FEB86B66DCEC98
+- generatedChecksum: 8DD6C24BF18C96BDC016D9165DF88FEB
   logicalPath: FreeRTOS/Source/include
   name: portable.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5A686FF678CBFBB4A1FEB86B66DCEC98
-- generatedChecksum: 6E4E1E4FD0B92BD15236DAA237ABCCAB
+  userChecksum: 8DD6C24BF18C96BDC016D9165DF88FEB
+- generatedChecksum: 94F2A78A46AC9F36C974B8E7BA09919F
   logicalPath: FreeRTOS/Source/portable/MPLAB/PIC32MK
   name: portmacro.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MK
   security: NON_SECURE
   type: HEADER
-  userChecksum: 6E4E1E4FD0B92BD15236DAA237ABCCAB
-- generatedChecksum: 696F66B2428CC530389C53B5FE617CE1
+  userChecksum: 94F2A78A46AC9F36C974B8E7BA09919F
+- generatedChecksum: 99A9BD4D90230B49C97BBCEE121C1182
   logicalPath: FreeRTOS/Source/include
   name: projdefs.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 696F66B2428CC530389C53B5FE617CE1
-- generatedChecksum: 6CB1FF8C27E6755C63D75369D1D7A37A
+  userChecksum: 99A9BD4D90230B49C97BBCEE121C1182
+- generatedChecksum: F917F55E280C54C23A7541A76AC34225
   logicalPath: FreeRTOS/Source/include
   name: queue.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 6CB1FF8C27E6755C63D75369D1D7A37A
-- generatedChecksum: 9F1AE7D29D09ED8CC21F3DA08049FB79
+  userChecksum: F917F55E280C54C23A7541A76AC34225
+- generatedChecksum: D7426A4807316E4BB5540458F6F4C68F
   logicalPath: FreeRTOS/Source/include
   name: semphr.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 9F1AE7D29D09ED8CC21F3DA08049FB79
-- generatedChecksum: D0D11C3D2D1BD585018AE271E1AC3B8F
+  userChecksum: D7426A4807316E4BB5540458F6F4C68F
+- generatedChecksum: 634A3DF879F184ABC5F96107F46AC4B2
   logicalPath: FreeRTOS/Source/include
   name: stack_macros.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: D0D11C3D2D1BD585018AE271E1AC3B8F
-- generatedChecksum: 7C71A9D2BEF16AC21C17ED5C2452C263
+  userChecksum: 634A3DF879F184ABC5F96107F46AC4B2
+- generatedChecksum: A652AC7D4938BE16F535BA3C90C86463
   logicalPath: FreeRTOS/Source/include
   name: stream_buffer.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 7C71A9D2BEF16AC21C17ED5C2452C263
-- generatedChecksum: 6972608768DDBE6E37A2D81B83DF490B
+  userChecksum: A652AC7D4938BE16F535BA3C90C86463
+- generatedChecksum: FADDA086C6C4E8FD7EBCE117438767A6
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos/system/debug
   name: sys_debug.h
   physicalPath: system/debug
   security: NON_SECURE
   type: HEADER
-  userChecksum: 6972608768DDBE6E37A2D81B83DF490B
-- generatedChecksum: 4A7FFAD7ACF8378CEC16FBF2BC2368BE
+  userChecksum: FADDA086C6C4E8FD7EBCE117438767A6
+- generatedChecksum: 45C173FBC598D95FA76B147486A15177
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos/system/dma
   name: sys_dma.h
   physicalPath: system/dma
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4A7FFAD7ACF8378CEC16FBF2BC2368BE
+  userChecksum: 45C173FBC598D95FA76B147486A15177
 - generatedChecksum: FF2FADFBBFB94FF4B4A57085D719E7C8
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos/system/dma
   name: sys_dma_mapping.h
@@ -559,27 +559,27 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 1C75A8A6B60598A2FD0D533F57839B72
-- generatedChecksum: 84B3224817BDD8B37961BB3B3441E134
+- generatedChecksum: 0A58B32A7058D0599EC5F6E3B33D42E6
   logicalPath: FreeRTOS/Source/include
   name: task.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 84B3224817BDD8B37961BB3B3441E134
-- generatedChecksum: C8BB70E2423A57902E9FDC0C9EC81F8D
+  userChecksum: 0A58B32A7058D0599EC5F6E3B33D42E6
+- generatedChecksum: 41176F771D22559EFCE82398FCF33668
   logicalPath: FreeRTOS/Source/include
   name: timers.h
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/include
   security: NON_SECURE
   type: HEADER
-  userChecksum: C8BB70E2423A57902E9FDC0C9EC81F8D
-- generatedChecksum: 2C8543317B3F067432097AB9BD3E8672
+  userChecksum: 41176F771D22559EFCE82398FCF33668
+- generatedChecksum: 7DC91D6D376C98802C9C2990432DE9B7
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2C8543317B3F067432097AB9BD3E8672
+  userChecksum: 7DC91D6D376C98802C9C2990432DE9B7
 - generatedChecksum: null
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos
   name: user.h
@@ -587,13 +587,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: D952D84078461ACADCCC56F030F63840
+- generatedChecksum: 076A5CDEAE185EDCB946BAC9F1AD03E5
   logicalPath: config/pic32mk_mcm_curiosity_pro_freertos
   name: p32MK1024MCM100.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: D952D84078461ACADCCC56F030F63840
+  userChecksum: 076A5CDEAE185EDCB946BAC9F1AD03E5
 format_version: v1.0
 libraries: []
 settings:
