@@ -39,8 +39,8 @@ To build the application, refer to the following table and open the project usin
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
 | pic32mk_gp_db.X | MPLABX project for [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
-| pic32mk_mcj_curiosity_pro.X | MPLABX project for PIC32MK MCJ Curiosity Pro Board |
-| pic32mk_mcm_curiosity_pro.X | MPLABX project for PIC32MK MCM Curiosity Pro Board |
+| pic32mk_mcj_curiosity_pro.X | MPLABX project for [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) |
+| pic32mk_mcm_curiosity_pro.X | MPLABX project for [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) |
 | pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
 |||
 
@@ -50,8 +50,8 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-| pic32mk_mcm_curiosity_pro.X | PIC32MK MCM Curiosity Pro Board |
-| pic32mk_mcj_curiosity_pro.X | PIC32MK MCJ Curiosity Pro Board |
+| pic32mk_mcm_curiosity_pro.X | [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) |
+| pic32mk_mcj_curiosity_pro.X | [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) |
 | pic32mk_mca_curiosity_pro.X | PIC32MK MCA Curiosity Pro Board |
 | pic32mk_gp_db.X | [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
 |||
@@ -61,11 +61,11 @@ The following table shows the target hardware for the application projects.
 - Connect micro USB cable to the 'Debug USB' connector (J12) on the board to the computer
 - Connect a micro USB cable to the USART-USB port J25. This will enumerate as a COM port on the PC
 
-### Setting up PIC32MK MCJ Curiosity Pro Board
+### Setting up [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113)
 
 - Connect micro USB cable to the 'Debug USB' connector (J1) on the board to the computer. This will enumerate as a COM port on the PC
 
-### Setting up PIC32MK MCM Curiosity Pro Board
+### Setting up [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A)
 
 - Connect a micro USB cable to the USB DEBUG port J500
 - Connect a micro USB cable to the USB to UART port J400. This will enumerate as a COM port on the PC
@@ -103,7 +103,7 @@ Refer to the following table for switch and LED name:
 | Board | Switch name | LED Name |
 | ----- | -------- | --------- |
 |  [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) | S1 | LED1 |
-|  PIC32MK MCJ Curiosity Pro Board | SW200 | LED2 |
-|  PIC32MK MCM Curiosity Pro Board | SW1 |LED2 |
+|  [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) | SW200 | LED2 |
+|  [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) | SW1 |LED2 |
 |  PIC32MK MCA Curiosity Pro Board | SW200 |LED1 |
 ||||

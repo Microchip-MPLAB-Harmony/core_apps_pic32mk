@@ -26,7 +26,7 @@ To build the application, refer to the following table and open the project usin
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| pic32mk_mcm_curiosity_pro.X | MPLABX project for PIC32MK MCM Curiosity Pro Board |
+| pic32mk_mcm_curiosity_pro.X | MPLABX project for [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) |
 |||
 
 ## Setting up the hardware
@@ -35,16 +35,16 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-| pic32mk_mcm_curiosity_pro.X | PIC32MK MCM Curiosity Pro Board |
+| pic32mk_mcm_curiosity_pro.X | [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) |
 |||
 
 - To run the demo, the following additional hardware are required:
     - Two [EEPROM 4 Click](https://www.mikroe.com/eeprom-4-click) boards
 
-### Setting up PIC32MK MCM Curiosity Pro Board
+### Setting up [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A)
 
 - Connect a micro USB cable to the USB DEBUG port J500
-- Install two [EEPROM 4 Click](https://www.mikroe.com/eeprom-4-click) boards on to the two mikroBUS sockets (J300 and J301) of PIC32MK MCM Curiosity Pro board
+- Install two [EEPROM 4 Click](https://www.mikroe.com/eeprom-4-click) boards on to the two mikroBUS sockets (J300 and J301) of [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A)
 
 ## Running the Application
 
@@ -55,5 +55,5 @@ Refer to the following table for LED name:
 
 | Board | LED Name |
 | ----- | -------- |
-|  PIC32MK MCM Curiosity Pro Board | LED1 |
+|  [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) | LED1 |
 |||

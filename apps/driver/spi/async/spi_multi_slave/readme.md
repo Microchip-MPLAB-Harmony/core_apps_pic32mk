@@ -26,7 +26,7 @@ To build the application, refer to the following table and open the project usin
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| pic32mk_mcj_curiosity_pro.X | MPLABX project for PIC32MK MCJ Curiosity Pro Board |
+| pic32mk_mcj_curiosity_pro.X | MPLABX project for [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) |
 | pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
 |||
 
@@ -36,7 +36,7 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-| pic32mk_mcj_curiosity_pro.X | PIC32MK MCJ Curiosity Pro Board |
+| pic32mk_mcj_curiosity_pro.X | [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) |
 | pic32mk_mca_curiosity_pro.X | PIC32MK MCA Curiosity Pro Board |
 |||
 
@@ -44,7 +44,7 @@ The following table shows the target hardware for the application projects.
     - Two [EEPROM 4 Click](https://www.mikroe.com/eeprom-4-click) boards
     - Two [mikroBUS Xplained Pro](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) boards
 
-### Setting up PIC32MK MCJ Curiosity Pro Board
+### Setting up [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113)
 
 - Connect micro USB cable to the 'Debug USB' connector(J1) on the board to the computer
 - Install [EEPROM 4 Click](https://www.mikroe.com/eeprom-4-click) boards on to the [mikroBUS Xplained Pro](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) boards
@@ -67,6 +67,6 @@ Refer to the following table for LED name:
 
 | Board | LED Name |
 | ----- | -------- |
-|  PIC32MK MCJ Curiosity Pro Board | LED2 |
+|  [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) | LED2 |
 |  PIC32MK MCA Curiosity Pro Board | LED1 |
 |||
