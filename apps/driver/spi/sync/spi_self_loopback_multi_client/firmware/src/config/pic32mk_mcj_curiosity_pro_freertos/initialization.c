@@ -114,13 +114,17 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
 // <editor-fold defaultstate="collapsed" desc="DRV_SPI Instance 0 Initialization Data">
 
 /* SPI Client Objects Pool */
 static DRV_SPI_CLIENT_OBJ drvSPI0ClientObjPool[DRV_SPI_CLIENTS_NUMBER_IDX0];
 
 /* SPI PLIB Interface Initialization */
-const DRV_SPI_PLIB_INTERFACE drvSPI0PlibAPI = {
+static const DRV_SPI_PLIB_INTERFACE drvSPI0PlibAPI = {
 
     /* SPI PLIB Setup */
     .setup = (DRV_SPI_PLIB_SETUP)SPI2_TransferSetup,
@@ -135,12 +139,12 @@ const DRV_SPI_PLIB_INTERFACE drvSPI0PlibAPI = {
     .callbackRegister = (DRV_SPI_PLIB_CALLBACK_REGISTER)SPI2_CallbackRegister,
 };
 
-const uint32_t drvSPI0remapDataBits[]= { 0x00000000, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x00000400, 0x00000800 };
-const uint32_t drvSPI0remapClockPolarity[] = { 0x00000000, 0x00000040 };
-const uint32_t drvSPI0remapClockPhase[] = { 0x00000000, 0x00000100 };
+static const uint32_t drvSPI0remapDataBits[]= { 0x00000000, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0x00000400, 0x00000800 };
+static const uint32_t drvSPI0remapClockPolarity[] = { 0x00000000, 0x00000040 };
+static const uint32_t drvSPI0remapClockPhase[] = { 0x00000000, 0x00000100 };
 
 /* SPI Driver Initialization Data */
-const DRV_SPI_INIT drvSPI0InitData =
+static const DRV_SPI_INIT drvSPI0InitData =
 {
     /* SPI PLIB API */
     .spiPlib = &drvSPI0PlibAPI,
@@ -159,8 +163,8 @@ const DRV_SPI_INIT drvSPI0InitData =
 
 
 };
-
 // </editor-fold>
+
 
 
 // *****************************************************************************
@@ -192,7 +196,7 @@ SYSTEM_OBJECTS sysObj;
 // *****************************************************************************
 // *****************************************************************************
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -206,15 +210,17 @@ SYSTEM_OBJECTS sysObj;
 
 void SYS_Initialize ( void* data )
 {
+    /* MISRAC 2012 deviation block start */
+    /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
 
     /* Start out with interrupts disabled before configuring any modules */
-    __builtin_disable_interrupts();
+    (void)__builtin_disable_interrupts();
 
   
     CLK_Initialize();
 
     /* Configure CP0.K0 for optimal performance (cached instruction pre-fetch) */
-    __builtin_mtc0(16, 0,(__builtin_mfc0(16, 0) | 0x3));
+    __builtin_mtc0(16, 0,(__builtin_mfc0(16, 0) | 0x3U));
 
     /* Configure Wait States and Prefetch */
     CHECONbits.PFMWS = 2;
@@ -228,11 +234,19 @@ void SYS_Initialize ( void* data )
 
 	BSP_Initialize();
 
+
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
+
     /* Initialize SPI0 Driver Instance */
     sysObj.drvSPI0 = DRV_SPI_Initialize(DRV_SPI_INDEX_0, (SYS_MODULE_INIT *)&drvSPI0InitData);
 
 
 
+
+    /* MISRAC 2012 deviation block end */
     APP_CLIENT1_Initialize();
     APP_CLIENT2_Initialize();
     APP_MONITOR_Initialize();
@@ -241,8 +255,11 @@ void SYS_Initialize ( void* data )
     EVIC_Initialize();
 
 	/* Enable global interrupts */
-    __builtin_enable_interrupts();
+    (void)__builtin_enable_interrupts();
 
+
+
+    /* MISRAC 2012 deviation block end */
 
 }
 
