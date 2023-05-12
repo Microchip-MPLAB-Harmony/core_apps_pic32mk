@@ -62,12 +62,12 @@
 #include "peripheral/dmac/plib_dmac.h"
 #include "peripheral/spi/spi_master/plib_spi6_master.h"
 #include "driver/sdspi/drv_sdspi.h"
+#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "system/ports/sys_ports.h"
 #include "system/dma/sys_dma.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "system/time/sys_time.h"
 #include "app.h"
 
 
@@ -79,6 +79,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MK1024MCM100"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MK1519"
+#define DEVICE_SERIES		 "PIC32MK"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 120000000
