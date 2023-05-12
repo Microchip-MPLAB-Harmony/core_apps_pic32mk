@@ -28,7 +28,7 @@ To build the application, refer to the following table and open the project usin
 | ----------------- | ---------------------------------------------- |
 | pic32mk_mcj_curiosity_pro_freertos.X | MPLABX project for [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) |
 | pic32mk_mcm_curiosity_pro_freertos.X | MPLABX project for [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) |
-| pic32mk_mca_curiosity_pro_freertos.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro_freertos.X | MPLABX project for [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A) |
 |||
 
 ## Setting up the hardware
@@ -39,7 +39,7 @@ The following table shows the target hardware for the application projects.
 |:---------|:---------:|
 | pic32mk_mcm_curiosity_pro_freertos.X | [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) |
 | pic32mk_mcj_curiosity_pro_freertos.X | [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) |
-| pic32mk_mca_curiosity_pro_freertos.X | PIC32MK MCA Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro_freertos.X | [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A) |
 |||
 
 ### Setting up [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113)
@@ -51,7 +51,7 @@ The following table shows the target hardware for the application projects.
 - Connect a micro USB cable to the USB DEBUG port J500
 - Connect a micro USB cable to the USB to UART port J400. This will enumerate as a COM port on the PC
 
-### Setting up PIC32MK MCA Curiosity Pro Board
+### Setting up [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A)
 
 - Connect micro USB cable to the 'Debug USB' connector(J1) on the board to the computer. This will enumerate as a COM port on the PC
 
@@ -77,5 +77,5 @@ Refer to the following table for LED name:
 | ----- | -------- |
 |  [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) | LED2 |
 |  [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) | LED2 |
-|  PIC32MK MCA Curiosity Pro Board | LED1 |
+|  [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A) | LED1 |
 |||
