@@ -57,6 +57,11 @@
 // *****************************************************************************
 // *****************************************************************************
 
+void SPI2_RX_InterruptHandler( void );
+void SPI2_TX_InterruptHandler( void );
+void DMA0_InterruptHandler( void );
+void DMA1_InterruptHandler( void );
+
 
 
 #endif // INTERRUPTS_H
