@@ -44,7 +44,7 @@ To build the application, refer to the following table and open the project usin
 | ----------------- | ---------------------------------------------- |
 | pic32mk_mcj_curiosity_pro.X | MPLABX project for [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) |
 | pic32mk_mcm_curiosity_pro.X | MPLABX project for [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) |
-| pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | MPLABX project for [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A) |
 |||
 
 ## Setting up the hardware
@@ -55,7 +55,7 @@ The following table shows the target hardware for the application projects.
 |:---------|:---------:|
 | pic32mk_mcm_curiosity_pro.X | [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) |
 | pic32mk_mcj_curiosity_pro.X | [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) |
-| pic32mk_mca_curiosity_pro.X | PIC32MK MCA Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A) |
 |||
 
 - To run the demo, the following additional hardware are required:
@@ -74,7 +74,7 @@ The following table shows the target hardware for the application projects.
 - Install [micro-sd Click](https://www.mikroe.com/microsd-click) board on to the mikroBUS socket J300 of [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A)
 - Insert the micro-SD Card in the micro-SD Card slot of the [micro-sd Click](https://www.mikroe.com/microsd-click) board 
 
-### Setting up PIC32MK MCA Curiosity Pro Board
+### Setting up [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A)
 
 - Connect micro USB cable to the 'Debug USB' connector (J1) on the board to the computer
 - Connect [IO1 Xplained Pro Extension Kit](https://www.microchip.com/developmenttools/ProductDetails/ATIO1-XPRO) to the J501 header of PIC32MK MCA Curiosity Pro Development Board
@@ -92,7 +92,7 @@ Refer to the following table for switch and LED name:
 | ----- | -------- | --------- |
 |  [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) | SW200 | LED2 |
 |  [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) | SW1 | LED1 |
-|  PIC32MK MCA Curiosity Pro Board | SW200 | LED1 |
+|  [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A) | SW200 | LED1 |
 ||||
 
 4. If LED is ON, Insert the SD Card on to your host PC
