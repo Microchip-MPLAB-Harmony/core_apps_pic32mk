@@ -1,32 +1,25 @@
-/*******************************************************************************
-  SYS CLK Static Functions for Clock System Service
+/******************************************************************************
+  MEMORY Driver File System Interface Implementation
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_clk.c
+    drv_memory_file_system.h
 
   Summary:
-    SYS CLK static function implementations for the Clock System Service.
+    MEMORY Driver Interface Definition
 
   Description:
-    The Clock System Service provides a simple interface to manage the
-    oscillators on Microchip microcontrollers. This file defines the static
-    implementation for the Clock System Service.
-
-  Remarks:
-    Static functions incorporate all system clock configuration settings as
-    determined by the user via the Microchip Harmony Configurator GUI.
-    It provides static version of the routines, eliminating the need for an
-    object ID or object handle.
-
-    Static single-open interfaces also eliminate the need for the open handle.
-
+    The MEMORY Driver provides a interface to access the MEMORY on the PIC32
+    microcontroller. This file implements the MEMORY Driver file system interface.
+    This file should be included in the project if MEMORY driver functionality with
+    File system is needed.
 *******************************************************************************/
 
+//DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -47,6 +40,9 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
+//DOM-IGNORE-END
+#ifndef DRV_MEMORY_FILE_SYSTEM_H
+#define DRV_MEMORY_FILE_SYSTEM_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -54,58 +50,32 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#include "device.h"
-#include "plib_clk.h"
+#include "driver/memory/src/drv_memory_local.h"
+#include "system/fs/sys_fs_media_manager.h"
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+    extern "C" {
+#endif
+// DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: File Scope Functions
+// Section: Global objects
 // *****************************************************************************
 // *****************************************************************************
 
+
 // *****************************************************************************
-/* Function:
-    void CLK_Initialize( void )
+// *****************************************************************************
+// Section: MEMORY Driver File system interface Routines
+// *****************************************************************************
+// *****************************************************************************
 
-  Summary:
-    Initializes hardware and internal data structure of the System Clock.
+void DRV_MEMORY_RegisterWithSysFs( const SYS_MODULE_INDEX drvIndex, uint8_t mediaType);
 
-  Description:
-    This function initializes the hardware and internal data structure of System
-    Clock Service.
-
-  Remarks:
-    This is configuration values for the static version of the Clock System
-    Service module is determined by the user via the MHC GUI.
-
-    The objective is to eliminate the user's need to be knowledgeable in the
-    function of the 'configuration bits' to configure the system oscillators.
-*/
-
-void CLK_Initialize( void )
-{
-    /* unlock system for clock configuration */
-    SYSKEY = 0x00000000U;
-    SYSKEY = 0xAA996655U;
-    SYSKEY = 0x556699AAU;
-
- 
-      
-
-    /* Peripheral Module Disable Configuration */
-
-    CFGCONbits.PMDLOCK = 0;
-
-    PMD1 = 0x371U;
-    PMD2 = 0x17001fU;
-    PMD3 = 0xffffffffU;
-    PMD4 = 0xfff01ffU;
-    PMD5 = 0xf30f3f3fU;
-    PMD6 = 0xf0d0000U;
-    PMD7 = 0x0U;
-
-    CFGCONbits.PMDLOCK = 1;
-
-    /* Lock system since done with clock configuration */
-    SYSKEY = 0x33333333U;
+#ifdef __cplusplus
 }
+#endif
+
+#endif //#ifndef DRV_MEMORY_FILE_SYSTEM_H
