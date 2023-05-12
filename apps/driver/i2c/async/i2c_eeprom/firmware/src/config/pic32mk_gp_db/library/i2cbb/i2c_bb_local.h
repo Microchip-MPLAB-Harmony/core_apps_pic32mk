@@ -62,14 +62,14 @@
 
 #endif
 // DOM-IGNORE-END
-#define OUTPUT              0
-#define INPUT               1
+#define OUTPUT              false
+#define INPUT               true
 
-#define LOW                 0
-#define HIGH                1
+#define LOW                 false
+#define HIGH                true
 
-#define M_ACK               0
-#define M_NACK              1
+#define M_ACK               false
+#define M_NACK              true
 
 #define I2C_BB_IRQn   9
 #define I2C_BB_TMR_CLOCK_FREQUENCY  60000000
@@ -83,6 +83,8 @@
 // Section: Data Types
 // *****************************************************************************
 // *****************************************************************************
+
+/* MISRA C-2012 Rule 5.2 deviated:6 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
 
 typedef enum
 {
@@ -144,6 +146,8 @@ typedef enum
 
 } I2CBB_BUS_STATE;
 
+/* MISRAC 2012 deviation block end */
+
 typedef enum
 {
     /* No error has occurred. */
@@ -172,7 +176,7 @@ typedef enum
 
 typedef void (* I2CBB_CALLBACK)( uintptr_t context );
 
-typedef void (*I2C_BB_TMR_PLIB_CALLBACK)(uint32_t, uintptr_t);
+typedef void (*I2C_BB_TMR_PLIB_CALLBACK)(uint32_t status, uintptr_t context);
 
 typedef void (*I2C_BB_TMR_PLIB_START)(void);
 
@@ -214,7 +218,7 @@ typedef struct
 
 } I2CBB_TRANSFER_SETUP;
 
-typedef struct _I2CBB_OBJ
+typedef struct I2CBB_OBJ_T
 {
     I2CBB_BUS_STATE        i2cState;
 
@@ -234,7 +238,7 @@ typedef struct _I2CBB_OBJ
 
     uint32_t               errorTimeOut;
 
-    bool                  _i2c_bit_written;
+    bool                  i2c_bit_written;
 
     bool                  ACKSTATUS_M;
 
