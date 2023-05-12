@@ -119,6 +119,10 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
 // <editor-fold defaultstate="collapsed" desc="DRV_USART Instance 0 Initialization Data">
 
 static DRV_USART_CLIENT_OBJ drvUSART0ClientObjPool[DRV_USART_CLIENTS_NUMBER_IDX0];
@@ -126,38 +130,38 @@ static DRV_USART_CLIENT_OBJ drvUSART0ClientObjPool[DRV_USART_CLIENTS_NUMBER_IDX0
 /* USART transmit/receive transfer objects pool */
 static DRV_USART_BUFFER_OBJ drvUSART0BufferObjPool[DRV_USART_QUEUE_SIZE_IDX0];
 
-const DRV_USART_PLIB_INTERFACE drvUsart0PlibAPI = {
+static const DRV_USART_PLIB_INTERFACE drvUsart0PlibAPI = {
     .readCallbackRegister = (DRV_USART_PLIB_READ_CALLBACK_REG)UART6_ReadCallbackRegister,
-    .read = (DRV_USART_PLIB_READ)UART6_Read,
+    .read_t = (DRV_USART_PLIB_READ)UART6_Read,
     .readIsBusy = (DRV_USART_PLIB_READ_IS_BUSY)UART6_ReadIsBusy,
     .readCountGet = (DRV_USART_PLIB_READ_COUNT_GET)UART6_ReadCountGet,
     .readAbort = (DRV_USART_PLIB_READ_ABORT)UART6_ReadAbort,
     .writeCallbackRegister = (DRV_USART_PLIB_WRITE_CALLBACK_REG)UART6_WriteCallbackRegister,
-    .write = (DRV_USART_PLIB_WRITE)UART6_Write,
+    .write_t = (DRV_USART_PLIB_WRITE)UART6_Write,
     .writeIsBusy = (DRV_USART_PLIB_WRITE_IS_BUSY)UART6_WriteIsBusy,
     .writeCountGet = (DRV_USART_PLIB_WRITE_COUNT_GET)UART6_WriteCountGet,
     .errorGet = (DRV_USART_PLIB_ERROR_GET)UART6_ErrorGet,
     .serialSetup = (DRV_USART_PLIB_SERIAL_SETUP)UART6_SerialSetup
 };
 
-const uint32_t drvUsart0remapDataWidth[] = { 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0, 0x6 };
-const uint32_t drvUsart0remapParity[] = { 0x0, 0x2, 0x4, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF };
-const uint32_t drvUsart0remapStopBits[] = { 0x0, 0xFFFFFFFF, 0x1 };
-const uint32_t drvUsart0remapError[] = { 0x2, 0x8, 0x4 };
+static const uint32_t drvUsart0remapDataWidth[] = { 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0x0, 0x6 };
+static const uint32_t drvUsart0remapParity[] = { 0x0, 0x2, 0x4, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU };
+static const uint32_t drvUsart0remapStopBits[] = { 0x0, 0xFFFFFFFFU, 0x1 };
+static const uint32_t drvUsart0remapError[] = { 0x2, 0x8, 0x4 };
 
-const DRV_USART_INTERRUPT_SOURCES drvUSART0InterruptSources =
+static const DRV_USART_INTERRUPT_SOURCES drvUSART0InterruptSources =
 {
     /* Peripheral has more than one interrupt vector */
     .isSingleIntSrc                        = false,
 
     /* Peripheral interrupt lines */
-    .intSources.multi.usartTxCompleteInt   = _UART6_TX_VECTOR,
+    .intSources.multi.usartTxCompleteInt   = (int32_t)_UART6_TX_VECTOR,
     .intSources.multi.usartTxReadyInt      = -1,
-    .intSources.multi.usartRxCompleteInt   = _UART6_RX_VECTOR,
-    .intSources.multi.usartErrorInt        = _UART6_FAULT_VECTOR,
+    .intSources.multi.usartRxCompleteInt   = (int32_t)_UART6_RX_VECTOR,
+    .intSources.multi.usartErrorInt        = (int32_t)_UART6_FAULT_VECTOR,
 };
 
-const DRV_USART_INIT drvUsart0InitData =
+static const DRV_USART_INIT drvUsart0InitData =
 {
     .usartPlib = &drvUsart0PlibAPI,
 
@@ -189,6 +193,7 @@ const DRV_USART_INIT drvUsart0InitData =
 // </editor-fold>
 
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: System Data
@@ -218,7 +223,7 @@ SYSTEM_OBJECTS sysObj;
 // *****************************************************************************
 // *****************************************************************************
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -232,15 +237,17 @@ SYSTEM_OBJECTS sysObj;
 
 void SYS_Initialize ( void* data )
 {
+    /* MISRAC 2012 deviation block start */
+    /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
 
     /* Start out with interrupts disabled before configuring any modules */
-    __builtin_disable_interrupts();
+    (void)__builtin_disable_interrupts();
 
   
     CLK_Initialize();
 
     /* Configure CP0.K0 for optimal performance (cached instruction pre-fetch) */
-    __builtin_mtc0(16, 0,(__builtin_mfc0(16, 0) | 0x3));
+    __builtin_mtc0(16, 0,(__builtin_mfc0(16, 0) | 0x3U));
 
     /* Configure Wait States and Prefetch */
     CHECONbits.PFMWS = 2;
@@ -254,19 +261,29 @@ void SYS_Initialize ( void* data )
 	UART6_Initialize();
 
 
+
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
+
     sysObj.drvUsart0 = DRV_USART_Initialize(DRV_USART_INDEX_0, (SYS_MODULE_INIT *)&drvUsart0InitData);
 
 
 
 
+    /* MISRAC 2012 deviation block end */
     APP_Initialize();
 
 
     EVIC_Initialize();
 
 	/* Enable global interrupts */
-    __builtin_enable_interrupts();
+    (void)__builtin_enable_interrupts();
 
+
+
+    /* MISRAC 2012 deviation block end */
 
 }
 
