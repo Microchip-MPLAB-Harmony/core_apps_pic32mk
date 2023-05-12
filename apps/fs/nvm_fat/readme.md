@@ -44,7 +44,7 @@ To build the application, refer to the following table and open the project usin
 | ----------------- | ---------------------------------------------- |
 | pic32mk_gp_db.X | MPLABX project for [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
 | pic32mk_mcm_curiosity_pro.X | MPLABX project for [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) |
-| pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | MPLABX project for [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A) |
 |||
 
 ## Setting up the hardware
@@ -54,7 +54,7 @@ The following table shows the target hardware for the application projects.
 | Project Name| Board|
 |:---------|:---------:|
 | pic32mk_mcm_curiosity_pro.X | [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) |
-| pic32mk_mca_curiosity_pro.X | PIC32MK MCA Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A) |
 | pic32mk_gp_db.X | [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
 |||
 
@@ -66,7 +66,7 @@ The following table shows the target hardware for the application projects.
 
 - Connect a micro USB cable to the USB DEBUG port J500
 
-### Setting up PIC32MK MCA Curiosity Pro Board
+### Setting up [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A)
 
 - Connect a micro USB cable to the USB DEBUG port
 
@@ -82,5 +82,5 @@ Refer to the following table for switch and LED name:
 | ----- | -------- | --------- |
 |  [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) | S1 | LED3 |
 |  [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) | SW1 | LED2 |
-|  PIC32MK MCA Curiosity Pro Board | SW200 | LED1 |
+|  [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A) | SW200 | LED1 |
 ||||
