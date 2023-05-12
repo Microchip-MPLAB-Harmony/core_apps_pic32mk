@@ -52,6 +52,7 @@
 
 #include "configuration.h"
 #include "definitions.h"
+#include "sys_tasks.h"
 
 
 // *****************************************************************************
@@ -62,9 +63,9 @@
 /* Handle for the TASK1_MCJ_Tasks. */
 TaskHandle_t xTASK1_MCJ_Tasks;
 
-void _TASK1_MCJ_Tasks(  void *pvParameters  )
+static void lTASK1_MCJ_Tasks(  void *pvParameters  )
 {   
-    while(1)
+    while(true)
     {
         TASK1_MCJ_Tasks();
     }
@@ -72,9 +73,9 @@ void _TASK1_MCJ_Tasks(  void *pvParameters  )
 /* Handle for the TASK2_MCJ_Tasks. */
 TaskHandle_t xTASK2_MCJ_Tasks;
 
-void _TASK2_MCJ_Tasks(  void *pvParameters  )
+static void lTASK2_MCJ_Tasks(  void *pvParameters  )
 {   
-    while(1)
+    while(true)
     {
         TASK2_MCJ_Tasks();
     }
@@ -82,9 +83,9 @@ void _TASK2_MCJ_Tasks(  void *pvParameters  )
 /* Handle for the TASK3_MCJ_Tasks. */
 TaskHandle_t xTASK3_MCJ_Tasks;
 
-void _TASK3_MCJ_Tasks(  void *pvParameters  )
+static void lTASK3_MCJ_Tasks(  void *pvParameters  )
 {   
-    while(1)
+    while(true)
     {
         TASK3_MCJ_Tasks();
     }
@@ -119,7 +120,7 @@ void SYS_Tasks ( void )
 
     /* Maintain the application's state machine. */
         /* Create OS Thread for TASK1_MCJ_Tasks. */
-    xTaskCreate((TaskFunction_t) _TASK1_MCJ_Tasks,
+    (void) xTaskCreate((TaskFunction_t) lTASK1_MCJ_Tasks,
                 "TASK1_MCJ_Tasks",
                 1024,
                 NULL,
@@ -127,7 +128,7 @@ void SYS_Tasks ( void )
                 &xTASK1_MCJ_Tasks);
 
     /* Create OS Thread for TASK2_MCJ_Tasks. */
-    xTaskCreate((TaskFunction_t) _TASK2_MCJ_Tasks,
+    (void) xTaskCreate((TaskFunction_t) lTASK2_MCJ_Tasks,
                 "TASK2_MCJ_Tasks",
                 1024,
                 NULL,
@@ -135,7 +136,7 @@ void SYS_Tasks ( void )
                 &xTASK2_MCJ_Tasks);
 
     /* Create OS Thread for TASK3_MCJ_Tasks. */
-    xTaskCreate((TaskFunction_t) _TASK3_MCJ_Tasks,
+    (void) xTaskCreate((TaskFunction_t) lTASK3_MCJ_Tasks,
                 "TASK3_MCJ_Tasks",
                 1024,
                 NULL,
