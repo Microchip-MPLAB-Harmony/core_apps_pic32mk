@@ -55,10 +55,10 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "bsp/bsp.h"
-#include "driver/i2c/drv_i2c.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
+#include "driver/i2c/drv_i2c.h"
 #include "app_i2c_eeprom.h"
 
 
@@ -70,6 +70,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MK0512MCJ064"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MK1570"
+#define DEVICE_SERIES		 "PIC32MK"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 120000000
