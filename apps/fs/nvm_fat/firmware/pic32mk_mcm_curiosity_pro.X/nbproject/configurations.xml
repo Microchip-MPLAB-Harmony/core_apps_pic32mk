@@ -71,6 +71,7 @@
           <itemPath>../src/config/pic32mk_mcm_curiosity_pro/user.h</itemPath>
           <itemPath>../src/config/pic32mk_mcm_curiosity_pro/configuration.h</itemPath>
           <itemPath>../src/config/pic32mk_mcm_curiosity_pro/interrupts.h</itemPath>
+          <itemPath>../src/config/pic32mk_mcm_curiosity_pro/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/nvm_disk_images.h</itemPath>

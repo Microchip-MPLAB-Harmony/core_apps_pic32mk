@@ -59,6 +59,7 @@
           <itemPath>../src/config/pic32mk_mca_curiosity_pro/interrupts.h</itemPath>
           <itemPath>../src/config/pic32mk_mca_curiosity_pro/user.h</itemPath>
           <itemPath>../src/config/pic32mk_mca_curiosity_pro/configuration.h</itemPath>
+          <itemPath>../src/config/pic32mk_mca_curiosity_pro/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/app_eeprom1.h</itemPath>
@@ -66,17 +67,6 @@
       <itemPath>../src/app_monitor.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
-      <logicalFolder name="f1" displayName="pic32mk_mca_curiosity_pro.mhc" projectFiles="true">
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/BSP_PIC32MK_MCA_Curiosity_Pro.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/core.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/dfp.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/drv_spi.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/HarmonyCore.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/project.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/spi1.yml</itemPath>
-      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_mca_curiosity_pro/harmony-manifest-success.yml</itemPath>
       <itemPath>spi_multi_slave_pic32mk_mca_curiosity_pro.mc3</itemPath>

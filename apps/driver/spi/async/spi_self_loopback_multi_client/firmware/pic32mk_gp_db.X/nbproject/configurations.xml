@@ -63,6 +63,7 @@
           <itemPath>../src/config/pic32mk_gp_db/user.h</itemPath>
           <itemPath>../src/config/pic32mk_gp_db/configuration.h</itemPath>
           <itemPath>../src/config/pic32mk_gp_db/interrupts.h</itemPath>
+          <itemPath>../src/config/pic32mk_gp_db/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/app_client1.h</itemPath>
