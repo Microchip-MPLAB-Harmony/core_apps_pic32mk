@@ -54,8 +54,8 @@
 #include "peripheral/spi/spi_master/plib_spi2_master.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "bsp/bsp.h"
 #include "driver/spi/drv_spi.h"
+#include "bsp/bsp.h"
 #include "system/int/sys_int.h"
 #include "system/ports/sys_ports.h"
 #include "system/dma/sys_dma.h"
@@ -76,13 +76,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32MK0512MCJ064"
-#define DEVICE_ARCH			 "MIPS"
-#define DEVICE_FAMILY		 "PIC32MK1570"
-#define DEVICE_SERIES		 "PIC32MK"
+#define DEVICE_NAME          "PIC32MK0512MCJ064"
+#define DEVICE_ARCH          "MIPS"
+#define DEVICE_FAMILY        "PIC32MK1570"
+#define DEVICE_SERIES        "PIC32MK"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 120000000
+#define CPU_CLOCK_FREQUENCY 120000000U
 
 // *****************************************************************************
 // *****************************************************************************
