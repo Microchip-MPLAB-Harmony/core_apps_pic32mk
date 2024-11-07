@@ -69,6 +69,7 @@
 #define APP_EEPROM2_HOLD_OutputEnable()      (TRISBCLR = (1U<<14))
 #define APP_EEPROM2_HOLD_InputEnable()       (TRISBSET = (1U<<14))
 #define APP_EEPROM2_HOLD_Get()               ((PORTB >> 14) & 0x1U)
+#define APP_EEPROM2_HOLD_GetLatch()          ((LATB >> 14) & 0x1U)
 #define APP_EEPROM2_HOLD_PIN                  GPIO_PIN_RB14
 
 /*** Macros for APP_EEPROM2_WP pin ***/
@@ -78,6 +79,7 @@
 #define APP_EEPROM2_WP_OutputEnable()      (TRISBCLR = (1U<<1))
 #define APP_EEPROM2_WP_InputEnable()       (TRISBSET = (1U<<1))
 #define APP_EEPROM2_WP_Get()               ((PORTB >> 1) & 0x1U)
+#define APP_EEPROM2_WP_GetLatch()          ((LATB >> 1) & 0x1U)
 #define APP_EEPROM2_WP_PIN                  GPIO_PIN_RB1
 
 /*** Macros for APP_EEPROM1_WP pin ***/
@@ -87,6 +89,7 @@
 #define APP_EEPROM1_WP_OutputEnable()      (TRISCCLR = (1U<<2))
 #define APP_EEPROM1_WP_InputEnable()       (TRISCSET = (1U<<2))
 #define APP_EEPROM1_WP_Get()               ((PORTC >> 2) & 0x1U)
+#define APP_EEPROM1_WP_GetLatch()          ((LATC >> 2) & 0x1U)
 #define APP_EEPROM1_WP_PIN                  GPIO_PIN_RC2
 
 /*** Macros for APP_EEPROM1_CS pin ***/
@@ -96,16 +99,18 @@
 #define APP_EEPROM1_CS_OutputEnable()      (TRISACLR = (1U<<4))
 #define APP_EEPROM1_CS_InputEnable()       (TRISASET = (1U<<4))
 #define APP_EEPROM1_CS_Get()               ((PORTA >> 4) & 0x1U)
+#define APP_EEPROM1_CS_GetLatch()          ((LATA >> 4) & 0x1U)
 #define APP_EEPROM1_CS_PIN                  GPIO_PIN_RA4
 
 /*** Macros for APP_EEPROM2_CS pin ***/
-#define APP_EEPROM2_CS_Set()               (LATDSET = (1U<<8))
-#define APP_EEPROM2_CS_Clear()             (LATDCLR = (1U<<8))
-#define APP_EEPROM2_CS_Toggle()            (LATDINV= (1U<<8))
-#define APP_EEPROM2_CS_OutputEnable()      (TRISDCLR = (1U<<8))
-#define APP_EEPROM2_CS_InputEnable()       (TRISDSET = (1U<<8))
-#define APP_EEPROM2_CS_Get()               ((PORTD >> 8) & 0x1U)
-#define APP_EEPROM2_CS_PIN                  GPIO_PIN_RD8
+#define APP_EEPROM2_CS_Set()               (LATCSET = (1U<<10))
+#define APP_EEPROM2_CS_Clear()             (LATCCLR = (1U<<10))
+#define APP_EEPROM2_CS_Toggle()            (LATCINV= (1U<<10))
+#define APP_EEPROM2_CS_OutputEnable()      (TRISCCLR = (1U<<10))
+#define APP_EEPROM2_CS_InputEnable()       (TRISCSET = (1U<<10))
+#define APP_EEPROM2_CS_Get()               ((PORTC >> 10) & 0x1U)
+#define APP_EEPROM2_CS_GetLatch()          ((LATC >> 10) & 0x1U)
+#define APP_EEPROM2_CS_PIN                  GPIO_PIN_RC10
 
 /*** Macros for APP_EEPROM1_HOLD pin ***/
 #define APP_EEPROM1_HOLD_Set()               (LATBSET = (1U<<12))
@@ -114,6 +119,7 @@
 #define APP_EEPROM1_HOLD_OutputEnable()      (TRISBCLR = (1U<<12))
 #define APP_EEPROM1_HOLD_InputEnable()       (TRISBSET = (1U<<12))
 #define APP_EEPROM1_HOLD_Get()               ((PORTB >> 12) & 0x1U)
+#define APP_EEPROM1_HOLD_GetLatch()          ((LATB >> 12) & 0x1U)
 #define APP_EEPROM1_HOLD_PIN                  GPIO_PIN_RB12
 
 
@@ -244,7 +250,7 @@ void GPIO_PortOutputEnable(GPIO_PORT port, uint32_t mask);
 
 static inline void GPIO_PinWrite(GPIO_PIN pin, bool value)
 {
-	 uint32_t xvalue = (uint32_t)value;
+     uint32_t xvalue = (uint32_t)value;
     GPIO_PortWrite((pin>>4U), (uint32_t)(0x1U) << (pin & 0xFU), (xvalue) << (pin & 0xFU));
 }
 
