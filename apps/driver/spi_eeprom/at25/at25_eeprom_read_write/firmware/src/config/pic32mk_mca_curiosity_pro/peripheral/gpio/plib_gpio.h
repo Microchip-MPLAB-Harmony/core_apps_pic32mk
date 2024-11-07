@@ -69,6 +69,7 @@
 #define GPIO_RC2_OutputEnable()      (TRISCCLR = (1U<<2))
 #define GPIO_RC2_InputEnable()       (TRISCSET = (1U<<2))
 #define GPIO_RC2_Get()               ((PORTC >> 2) & 0x1U)
+#define GPIO_RC2_GetLatch()          ((LATC >> 2) & 0x1U)
 #define GPIO_RC2_PIN                  GPIO_PIN_RC2
 
 /*** Macros for GPIO_RA4 pin ***/
@@ -78,6 +79,7 @@
 #define GPIO_RA4_OutputEnable()      (TRISACLR = (1U<<4))
 #define GPIO_RA4_InputEnable()       (TRISASET = (1U<<4))
 #define GPIO_RA4_Get()               ((PORTA >> 4) & 0x1U)
+#define GPIO_RA4_GetLatch()          ((LATA >> 4) & 0x1U)
 #define GPIO_RA4_PIN                  GPIO_PIN_RA4
 
 /*** Macros for GPIO_RB12 pin ***/
@@ -87,6 +89,7 @@
 #define GPIO_RB12_OutputEnable()      (TRISBCLR = (1U<<12))
 #define GPIO_RB12_InputEnable()       (TRISBSET = (1U<<12))
 #define GPIO_RB12_Get()               ((PORTB >> 12) & 0x1U)
+#define GPIO_RB12_GetLatch()          ((LATB >> 12) & 0x1U)
 #define GPIO_RB12_PIN                  GPIO_PIN_RB12
 
 
@@ -217,7 +220,7 @@ void GPIO_PortOutputEnable(GPIO_PORT port, uint32_t mask);
 
 static inline void GPIO_PinWrite(GPIO_PIN pin, bool value)
 {
-	 uint32_t xvalue = (uint32_t)value;
+     uint32_t xvalue = (uint32_t)value;
     GPIO_PortWrite((pin>>4U), (uint32_t)(0x1U) << (pin & 0xFU), (xvalue) << (pin & 0xFU));
 }
 
