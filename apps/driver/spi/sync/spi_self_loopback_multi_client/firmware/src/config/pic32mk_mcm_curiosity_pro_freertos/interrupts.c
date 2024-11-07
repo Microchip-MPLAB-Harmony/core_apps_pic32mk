@@ -80,22 +80,22 @@ void SPI6_TX_Handler (void);
 // *****************************************************************************
 
 
-void DMA0_Handler (void)
+void __attribute__((used)) DMA0_Handler (void)
 {
     DMA0_InterruptHandler();
 }
 
-void DMA1_Handler (void)
+void __attribute__((used)) DMA1_Handler (void)
 {
     DMA1_InterruptHandler();
 }
 
-void SPI6_RX_Handler (void)
+void __attribute__((used)) SPI6_RX_Handler (void)
 {
     SPI6_RX_InterruptHandler();
 }
 
-void SPI6_TX_Handler (void)
+void __attribute__((used)) SPI6_TX_Handler (void)
 {
     SPI6_TX_InterruptHandler();
 }
