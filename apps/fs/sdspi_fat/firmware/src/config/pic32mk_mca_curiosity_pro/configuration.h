@@ -88,7 +88,7 @@ extern "C" {
 #define SYS_FS_AUTOMOUNT_ENABLE           false
 #define SYS_FS_MAX_FILES                  (2U)
 #define SYS_FS_MAX_FILE_SYSTEM_TYPE       (1U)
-#define SYS_FS_MEDIA_MAX_BLOCK_SIZE       (512)
+#define SYS_FS_MEDIA_MAX_BLOCK_SIZE       (512U)
 #define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  (2048U)
 #define SYS_FS_USE_LFN                    (1)
 #define SYS_FS_FILE_NAME_LEN              (255U)
@@ -125,7 +125,7 @@ extern "C" {
 #define DRV_SDSPI_INDEX_0                       0
 #define DRV_SDSPI_CLIENTS_NUMBER_IDX0           1
 #define DRV_SDSPI_QUEUE_SIZE_IDX0               4
-#define DRV_SDSPI_CHIP_SELECT_PIN_IDX0          SYS_PORT_PIN_RD8
+#define DRV_SDSPI_CHIP_SELECT_PIN_IDX0          SYS_PORT_PIN_RC10
 #define DRV_SDSPI_SPEED_HZ_IDX0                 5000000
 #define DRV_SDSPI_POLLING_INTERVAL_MS_IDX0      1000
 

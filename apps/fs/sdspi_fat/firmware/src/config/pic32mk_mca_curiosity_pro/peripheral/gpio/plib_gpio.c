@@ -43,7 +43,6 @@
 
 #include "plib_gpio.h"
 #include "interrupts.h"
-#include "interrupts.h"
 
 
 
@@ -68,9 +67,10 @@ void GPIO_Initialize ( void )
     /* PORTB Initialization */
     ANSELBCLR = 0x80U; /* Digital Mode Enable */
     /* PORTC Initialization */
+    LATC = 0x400U; /* Initial Latch Value */
+    TRISCCLR = 0x400U; /* Direction Control */
+    ANSELCCLR = 0x400U; /* Digital Mode Enable */
     /* PORTD Initialization */
-    LATD = 0x100U; /* Initial Latch Value */
-    TRISDCLR = 0x100U; /* Direction Control */
 
     /* Unlock system for PPS configuration */
     SYSKEY = 0x00000000U;

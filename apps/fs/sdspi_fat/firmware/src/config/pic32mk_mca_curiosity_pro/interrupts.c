@@ -77,17 +77,17 @@ void SPI1_TX_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_CORE_TIMER_VECTOR, ipl1SRS) CORE_TIMER_Handler (void)
+void __attribute__((used)) __ISR(_CORE_TIMER_VECTOR, ipl1SRS) CORE_TIMER_Handler (void)
 {
     CORE_TIMER_InterruptHandler();
 }
 
-void __ISR(_SPI1_RX_VECTOR, ipl1SRS) SPI1_RX_Handler (void)
+void __attribute__((used)) __ISR(_SPI1_RX_VECTOR, ipl1SRS) SPI1_RX_Handler (void)
 {
     SPI1_RX_InterruptHandler();
 }
 
-void __ISR(_SPI1_TX_VECTOR, ipl1SRS) SPI1_TX_Handler (void)
+void __attribute__((used)) __ISR(_SPI1_TX_VECTOR, ipl1SRS) SPI1_TX_Handler (void)
 {
     SPI1_TX_InterruptHandler();
 }

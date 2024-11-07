@@ -62,14 +62,15 @@
 // *****************************************************************************
 
 
-/*** Macros for GPIO_RD8 pin ***/
-#define GPIO_RD8_Set()               (LATDSET = (1U<<8))
-#define GPIO_RD8_Clear()             (LATDCLR = (1U<<8))
-#define GPIO_RD8_Toggle()            (LATDINV= (1U<<8))
-#define GPIO_RD8_OutputEnable()      (TRISDCLR = (1U<<8))
-#define GPIO_RD8_InputEnable()       (TRISDSET = (1U<<8))
-#define GPIO_RD8_Get()               ((PORTD >> 8) & 0x1U)
-#define GPIO_RD8_PIN                  GPIO_PIN_RD8
+/*** Macros for GPIO_RC10 pin ***/
+#define GPIO_RC10_Set()               (LATCSET = (1U<<10))
+#define GPIO_RC10_Clear()             (LATCCLR = (1U<<10))
+#define GPIO_RC10_Toggle()            (LATCINV= (1U<<10))
+#define GPIO_RC10_OutputEnable()      (TRISCCLR = (1U<<10))
+#define GPIO_RC10_InputEnable()       (TRISCSET = (1U<<10))
+#define GPIO_RC10_Get()               ((PORTC >> 10) & 0x1U)
+#define GPIO_RC10_GetLatch()          ((LATC >> 10) & 0x1U)
+#define GPIO_RC10_PIN                  GPIO_PIN_RC10
 
 
 // *****************************************************************************
@@ -199,7 +200,7 @@ void GPIO_PortOutputEnable(GPIO_PORT port, uint32_t mask);
 
 static inline void GPIO_PinWrite(GPIO_PIN pin, bool value)
 {
-	 uint32_t xvalue = (uint32_t)value;
+     uint32_t xvalue = (uint32_t)value;
     GPIO_PortWrite((pin>>4U), (uint32_t)(0x1U) << (pin & 0xFU), (xvalue) << (pin & 0xFU));
 }
 
