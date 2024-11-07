@@ -53,11 +53,11 @@
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
+#include "peripheral/uart/plib_uart6.h"
 #include "system/int/sys_int.h"
 #include "system/dma/sys_dma.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "peripheral/uart/plib_uart6.h"
 #include "app.h"
 
 
@@ -71,13 +71,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32MK1024GPE100"
-#define DEVICE_ARCH			 "MIPS"
-#define DEVICE_FAMILY		 "PIC32MK1402"
-#define DEVICE_SERIES		 "PIC32MK"
+#define DEVICE_NAME          "PIC32MK1024GPE100"
+#define DEVICE_ARCH          "MIPS"
+#define DEVICE_FAMILY        "PIC32MK1402"
+#define DEVICE_SERIES        "PIC32MK"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 120000000
+#define CPU_CLOCK_FREQUENCY 120000000U
 
 // *****************************************************************************
 // *****************************************************************************
