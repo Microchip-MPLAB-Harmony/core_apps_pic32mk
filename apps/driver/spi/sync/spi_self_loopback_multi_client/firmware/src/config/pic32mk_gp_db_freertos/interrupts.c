@@ -78,12 +78,12 @@ void SPI6_TX_Handler (void);
 // *****************************************************************************
 
 
-void SPI6_RX_Handler (void)
+void __attribute__((used)) SPI6_RX_Handler (void)
 {
     SPI6_RX_InterruptHandler();
 }
 
-void SPI6_TX_Handler (void)
+void __attribute__((used)) SPI6_TX_Handler (void)
 {
     SPI6_TX_InterruptHandler();
 }
