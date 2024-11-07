@@ -60,8 +60,11 @@
 // Section: RTOS "Tasks" Routine
 // *****************************************************************************
 // *****************************************************************************
+
 /* Handle for the TASK1_MCJ_Tasks. */
 TaskHandle_t xTASK1_MCJ_Tasks;
+
+
 
 static void lTASK1_MCJ_Tasks(  void *pvParameters  )
 {   
@@ -70,8 +73,11 @@ static void lTASK1_MCJ_Tasks(  void *pvParameters  )
         TASK1_MCJ_Tasks();
     }
 }
+
 /* Handle for the TASK2_MCJ_Tasks. */
 TaskHandle_t xTASK2_MCJ_Tasks;
+
+
 
 static void lTASK2_MCJ_Tasks(  void *pvParameters  )
 {   
@@ -80,8 +86,11 @@ static void lTASK2_MCJ_Tasks(  void *pvParameters  )
         TASK2_MCJ_Tasks();
     }
 }
+
 /* Handle for the TASK3_MCJ_Tasks. */
 TaskHandle_t xTASK3_MCJ_Tasks;
+
+
 
 static void lTASK3_MCJ_Tasks(  void *pvParameters  )
 {   
@@ -119,30 +128,33 @@ void SYS_Tasks ( void )
     
 
     /* Maintain the application's state machine. */
-        /* Create OS Thread for TASK1_MCJ_Tasks. */
-    (void) xTaskCreate((TaskFunction_t) lTASK1_MCJ_Tasks,
-                "TASK1_MCJ_Tasks",
-                1024,
-                NULL,
-                1,
-                &xTASK1_MCJ_Tasks);
+    
+    /* Create OS Thread for TASK1_MCJ_Tasks. */
+    (void) xTaskCreate(
+           (TaskFunction_t) lTASK1_MCJ_Tasks,
+           "TASK1_MCJ_Tasks",
+           1024,
+           NULL,
+           1U ,
+           &xTASK1_MCJ_Tasks);
 
     /* Create OS Thread for TASK2_MCJ_Tasks. */
-    (void) xTaskCreate((TaskFunction_t) lTASK2_MCJ_Tasks,
-                "TASK2_MCJ_Tasks",
-                1024,
-                NULL,
-                2,
-                &xTASK2_MCJ_Tasks);
+    (void) xTaskCreate(
+           (TaskFunction_t) lTASK2_MCJ_Tasks,
+           "TASK2_MCJ_Tasks",
+           1024,
+           NULL,
+           2U ,
+           &xTASK2_MCJ_Tasks);
 
     /* Create OS Thread for TASK3_MCJ_Tasks. */
-    (void) xTaskCreate((TaskFunction_t) lTASK3_MCJ_Tasks,
-                "TASK3_MCJ_Tasks",
-                1024,
-                NULL,
-                3,
-                &xTASK3_MCJ_Tasks);
-
+    (void) xTaskCreate(
+           (TaskFunction_t) lTASK3_MCJ_Tasks,
+           "TASK3_MCJ_Tasks",
+           1024,
+           NULL,
+           3U ,
+           &xTASK3_MCJ_Tasks);
 
 
 
