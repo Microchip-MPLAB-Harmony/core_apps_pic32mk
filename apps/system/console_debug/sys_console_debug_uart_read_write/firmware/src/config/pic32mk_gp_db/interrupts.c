@@ -77,17 +77,17 @@ void UART6_TX_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_UART6_FAULT_VECTOR, ipl1SOFT) UART6_FAULT_Handler (void)
+void __attribute__((used)) __ISR(_UART6_FAULT_VECTOR, ipl1SOFT) UART6_FAULT_Handler (void)
 {
     UART6_FAULT_InterruptHandler();
 }
 
-void __ISR(_UART6_RX_VECTOR, ipl1SOFT) UART6_RX_Handler (void)
+void __attribute__((used)) __ISR(_UART6_RX_VECTOR, ipl1SOFT) UART6_RX_Handler (void)
 {
     UART6_RX_InterruptHandler();
 }
 
-void __ISR(_UART6_TX_VECTOR, ipl1SOFT) UART6_TX_Handler (void)
+void __attribute__((used)) __ISR(_UART6_TX_VECTOR, ipl1SOFT) UART6_TX_Handler (void)
 {
     UART6_TX_InterruptHandler();
 }
