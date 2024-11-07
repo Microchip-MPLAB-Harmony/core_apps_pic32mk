@@ -52,8 +52,8 @@
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
-#include "peripheral/spi/spi_master/plib_spi6_master.h"
 #include "driver/at25/drv_at25.h"
+#include "peripheral/spi/spi_master/plib_spi6_master.h"
 #include "system/int/sys_int.h"
 #include "system/ports/sys_ports.h"
 #include "osal/osal.h"
@@ -71,13 +71,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32MK1024GPE100"
-#define DEVICE_ARCH			 "MIPS"
-#define DEVICE_FAMILY		 "PIC32MK1402"
-#define DEVICE_SERIES		 "PIC32MK"
+#define DEVICE_NAME          "PIC32MK1024GPE100"
+#define DEVICE_ARCH          "MIPS"
+#define DEVICE_FAMILY        "PIC32MK1402"
+#define DEVICE_SERIES        "PIC32MK"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 120000000
+#define CPU_CLOCK_FREQUENCY 120000000U
 
 // *****************************************************************************
 // *****************************************************************************
