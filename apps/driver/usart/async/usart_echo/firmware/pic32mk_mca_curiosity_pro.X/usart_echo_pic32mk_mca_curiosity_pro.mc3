@@ -1,4 +1,4 @@
-<config configName="pic32mk_mca_curiosity_pro" projectName="usart_echo_pic32mk_mca_curiosity_pro" configVersion="1.1" device="PIC32MK0128MCA048" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
+<config configName="pic32mk_mca_curiosity_pro" projectName="usart_echo_pic32mk_mca_curiosity_pro" configVersion="1.1" device="PIC32MK0128MCA048" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -31,7 +31,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -436,14 +436,17 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
     &lt;GraphSettings canvasHeight=&quot;288&quot; canvasWidth=&quot;763&quot; dnOrder=&quot;0&quot;/&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;PowerProfiles dnOrder=&quot;1&quot;&gt;
+      &lt;Profile dnOrder=&quot;0&quot; id=&quot;profile0&quot; name=&quot;Main&quot;/&gt;
+    &lt;/PowerProfiles&gt;
+    &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_PIC32MK_MCA_Curiosity_Pro&quot; x=&quot;340&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;600&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;core&quot; x=&quot;240&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;dfp&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;drv_usart&quot; x=&quot;348&quot; y=&quot;86&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;uart2&quot; x=&quot;189&quot; y=&quot;60&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;uart2&quot; x=&quot;146&quot; y=&quot;143&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
   &lt;/UserData&gt;
@@ -499,6 +502,17 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_30_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_30_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;U2TX&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_30_MODE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_30_MODE&quot;&gt;
@@ -535,9 +549,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_33_FUNCTION_TYPE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_33_FUNCTION_TYPE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;U2TX&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/core&gt;
 &lt;/core&gt;
 </value>
@@ -546,9 +558,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_33_MODE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_33_MODE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/core&gt;
 &lt;/core&gt;
 </value>
@@ -557,9 +567,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_36_FUNCTION_TYPE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_36_FUNCTION_TYPE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;U2RX&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/core&gt;
 &lt;/core&gt;
 </value>
@@ -568,9 +576,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_36_MODE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_36_MODE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/core&gt;
 &lt;/core&gt;
 </value>
@@ -603,6 +609,17 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_3_MODE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_40_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_40_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;U2RX&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1141,7 +1158,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SYS_PORT_C_ANSEL&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1024&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1173,7 +1190,7 @@
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;16&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;32&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1205,7 +1222,7 @@
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;RPC10&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;RPD8&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1627,34 +1644,42 @@
 </value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.HashMap">
+   <generatedFileHashHistoryMap class="java.util.TreeMap">
       <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\exceptions.c</file>
-         <hash>7c1b9a2e42598d51c643984260a4b0d966a18f1ad97cc90d166aa9a4311ab6af</hash>
+         <file>..\src\app.c</file>
+         <hash>632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\evic\plib_evic.c</file>
-         <hash>d0b377018725cfae86731a980f119d86a5f38c36a29c8042c38a356b95c31fd6</hash>
+         <file>..\src\app.h</file>
+         <hash>8e35d8509552a4d1d6e6f123ad75694cf784a707f7dac592ed33b55121aa8e28</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\initialization.c</file>
-         <hash>ffff0c4bb730e48a168b10c099e3ef6c8fc1872bf97bff72ff74b73f2c05d31d</hash>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\bsp\bsp.c</file>
+         <hash>49bd2cfe883941d4ea787108bbf62dc69728cfce41a6da55f4f4c5cb6acdaa8c</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\system\system_common.h</file>
-         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\bsp\bsp.h</file>
+         <hash>6d0a671fc7d492ae5604380187d3584a77fad53e58cd37211c9efd56bfe7c24e</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\evic\plib_evic.h</file>
-         <hash>5d5752964e52f826051deba5913da1db14fdc9884ede6dfbd872699279e8e56f</hash>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\configuration.h</file>
+         <hash>c02d6075e3d55a188d3de34f7252b6a19e34b2ef2cb4cae10f31009d4bddb301</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\uart\plib_uart2.c</file>
-         <hash>be1e9c97def083b3c69af5e58ef3b9282cb7f0a6bbf3d3ede0c23410892a864f</hash>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\definitions.h</file>
+         <hash>741c651b6b864de56ebe071161bf924e4b057761d25d1fb16237f1f71dec0919</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\driver\usart\src\drv_usart_local.h</file>
-         <hash>67fc75739e4210784198a555a051c1152209250bf0ead10d7c66d56652055fd7</hash>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\device.h</file>
+         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\driver\driver.h</file>
+         <hash>042fdd289460dbddb8e805850af7e3ac9aea95468e37414959781ebc5b2f454d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\driver\driver_common.h</file>
+         <hash>5217965f6720b4fdf717e99ce9df4f2c9fbd82bbbc9655847166d1eefa806fee</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\driver\usart\drv_usart.h</file>
@@ -1665,140 +1690,132 @@
          <hash>2303ed0c3d118933e7bbe5d42e79fe4972422220bbace1e59056c4b62130dd2c</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\definitions.h</file>
-         <hash>14fdf3e6394008c723ca51872cd9ba21498371e26cbd4f72a8e6f2a68cfbe691</hash>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\driver\usart\src\drv_usart.c</file>
+         <hash>1c3b8526b7089ea9d91e89c36a309e5cbce5eccfa5e9fc63d104fe6631625be0</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\bsp\bsp.c</file>
-         <hash>49bd2cfe883941d4ea787108bbf62dc69728cfce41a6da55f4f4c5cb6acdaa8c</hash>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\driver\usart\src\drv_usart_local.h</file>
+         <hash>67fc75739e4210784198a555a051c1152209250bf0ead10d7c66d56652055fd7</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\system\system.h</file>
-         <hash>2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55</hash>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\exceptions.c</file>
+         <hash>ed8f326d4f1abc2e74c1743119304a2f613522e3baacdd8df59fdda14c44619e</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\stdio\xc32_monitor.c</file>
-         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\bsp\bsp.h</file>
-         <hash>6d0a671fc7d492ae5604380187d3584a77fad53e58cd37211c9efd56bfe7c24e</hash>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\initialization.c</file>
+         <hash>6b8611e7881ddd2df2fabe59f0e047c17e03608e4abc4b789e1691cecd3b8683</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\interrupts.c</file>
-         <hash>086e1a04e3ab2d50558372b329cb328d17beab61cd352688e66931883b2f7ee8</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\sys_tasks.h</file>
-         <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\osal\osal_impl_basic.h</file>
-         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\user.h</file>
-         <hash>451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995</hash>
+         <hash>cc798922d45332bcf81c5fb0ae7309a4c1115b820707c27aa336aeefb781e9c0</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\interrupts.h</file>
          <hash>a85229c54cd6893893687f134d4a3db32db39262e850b8f68b497d926b17d8de</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\system\int\src\sys_int.c</file>
-         <hash>30ac5e334ca90204f545f1ab769ae26f421b910b3fb3be99354b364febceee64</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\uart\plib_uart_common.h</file>
-         <hash>70213cd740b3ff9a591d93ad6aac9493335851db084dd862275effacdebf710d</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\configuration.h</file>
-         <hash>c02d6075e3d55a188d3de34f7252b6a19e34b2ef2cb4cae10f31009d4bddb301</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\device.h</file>
-         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\system\int\sys_int.h</file>
-         <hash>2c878ab7ff41ae56b5c0c3c94929ad66eb87b8660bf9a439177d049e8ad8f8c8</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\system\debug\sys_debug.h</file>
-         <hash>5c34d947b4d700829a89d9d7616d941fa9e17047c67adc6de4d365b0a8ce39f4</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\system\system_module.h</file>
-         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\osal\osal.h</file>
-         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\toolchain_specifics.h</file>
-         <hash>38b3e0e3652463c4c84dc445fd0af062ddf1e36ce2aefeae250f3f0c4fef5685</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\system\int\sys_int_mapping.h</file>
-         <hash>a2dcf05575becc98aa212af1d220eda07487bd645d82c4d7a980aa3a22384cf3</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\tasks.c</file>
-         <hash>36364a39e784157f4aac281dfecc1f19be971c9935e6299a6f37a78cd98d1d46</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\clk\plib_clk.c</file>
-         <hash>1695599bba6869897c6b1e80bf33b019ed867cb92a709622d03289ec099959ab</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\driver\driver.h</file>
-         <hash>042fdd289460dbddb8e805850af7e3ac9aea95468e37414959781ebc5b2f454d</hash>
+         <hash>1cfe3b61d9693b2369922041eef33fe16b3c1ccd9c85d4ded808b805f90a869c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\osal\osal_definitions.h</file>
          <hash>5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37</hash>
       </entry>
       <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\osal\osal_impl_basic.h</file>
+         <hash>7f06b68ec1d6cf3bbd1129bdac599d108557e2c26ca5a58a28a3d59fdf772944</hash>
+      </entry>
+      <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\p32MK0128MCA048.ld</file>
          <hash>3493525766d5d8e0ed78940ae9b93d1e2adb8fd2fd54d749da2d5767905ceadf</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\clk\plib_clk.c</file>
+         <hash>60639bfa7c2b70d29bca9cb9e580ba5057717ac169551df98d5db259e1e32f96</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\clk\plib_clk.h</file>
          <hash>35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255</hash>
       </entry>
       <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\evic\plib_evic.c</file>
+         <hash>8e947b160700bf7e66658ec63fef749841aa96e5495e5a20a12426a06bc7e1a5</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\evic\plib_evic.h</file>
+         <hash>55b8007e85248cc54d4f7c47fb5c11d73e218eedf2d7fd964855f218f5ebd778</hash>
+      </entry>
+      <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\gpio\plib_gpio.c</file>
-         <hash>69dde41d1d731bfa88b1c76e01290c07fe1b6fd99a9b3136c204c06d0d1dd96a</hash>
+         <hash>5f0dc9cc3a4ff65955a449a79b86bd642d0aa1bf4d36055501a388e48229952b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\gpio\plib_gpio.h</file>
+         <hash>5720ba5e5af828f4776f6eb2d9ad39814a9c120e2af504299ec27a5dd9cd4831</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\uart\plib_uart2.c</file>
+         <hash>be1e9c97def083b3c69af5e58ef3b9282cb7f0a6bbf3d3ede0c23410892a864f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\uart\plib_uart2.h</file>
          <hash>af76cd7d7d14987f5d6dd27d7ad44f2efa6eb78e4b9c9f69d85d7f47c2971db6</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\gpio\plib_gpio.h</file>
-         <hash>6d3335fb86f3eeabebc087ef0767952befb8e0cc9b99918f6ae04e33a630a8d7</hash>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\uart\plib_uart_common.h</file>
+         <hash>70213cd740b3ff9a591d93ad6aac9493335851db084dd862275effacdebf710d</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\driver\usart\src\drv_usart.c</file>
-         <hash>f3d874dc864b0e4987fe89c7a6a0e8851b2a9087e16538d968e7405f6b1f334e</hash>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\stdio\xc32_monitor.c</file>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
       </entry>
       <entry>
-         <file>..\src\app.h</file>
-         <hash>8e35d8509552a4d1d6e6f123ad75694cf784a707f7dac592ed33b55121aa8e28</hash>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\sys_tasks.h</file>
+         <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\system\debug\sys_debug.h</file>
+         <hash>aa94da8f32cbcb40672145542d149d077ff8f4b25c08d47d53e3d206d1c6bb83</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\system\int\src\sys_int.c</file>
+         <hash>30ac5e334ca90204f545f1ab769ae26f421b910b3fb3be99354b364febceee64</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\system\int\sys_int.h</file>
+         <hash>2c878ab7ff41ae56b5c0c3c94929ad66eb87b8660bf9a439177d049e8ad8f8c8</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\system\int\sys_int_mapping.h</file>
+         <hash>a2dcf05575becc98aa212af1d220eda07487bd645d82c4d7a980aa3a22384cf3</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\system\system.h</file>
+         <hash>2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\system\system_common.h</file>
+         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\system\system_module.h</file>
+         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\tasks.c</file>
+         <hash>36364a39e784157f4aac281dfecc1f19be971c9935e6299a6f37a78cd98d1d46</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\toolchain_specifics.h</file>
+         <hash>b4de6e02e3e48c62f7ba233405ffdf6ef31bb971d1a7b49efa1676f45cabc1ac</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\user.h</file>
+         <hash>451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995</hash>
       </entry>
       <entry>
          <file>..\src\main.c</file>
          <hash>d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5</hash>
-      </entry>
-      <entry>
-         <file>..\src\app.c</file>
-         <hash>632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\driver\driver_common.h</file>
-         <hash>5217965f6720b4fdf717e99ce9df4f2c9fbd82bbbc9655847166d1eefa806fee</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
