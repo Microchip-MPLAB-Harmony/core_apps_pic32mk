@@ -54,8 +54,8 @@
 #include "peripheral/evic/plib_evic.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "peripheral/uart/plib_uart6.h"
 #include "osal/osal.h"
+#include "peripheral/uart/plib_uart6.h"
 #include "task1.h"
 #include "task2.h"
 #include "task3.h"
@@ -72,13 +72,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32MK1024MCM100"
-#define DEVICE_ARCH			 "MIPS"
-#define DEVICE_FAMILY		 "PIC32MK1519"
-#define DEVICE_SERIES		 "PIC32MK"
+#define DEVICE_NAME          "PIC32MK1024MCM100"
+#define DEVICE_ARCH          "MIPS"
+#define DEVICE_FAMILY        "PIC32MK1519"
+#define DEVICE_SERIES        "PIC32MK"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 120000000
+#define CPU_CLOCK_FREQUENCY 120000000U
 
 // *****************************************************************************
 // *****************************************************************************

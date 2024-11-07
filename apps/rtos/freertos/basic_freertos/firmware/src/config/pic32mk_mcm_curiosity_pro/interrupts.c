@@ -80,22 +80,22 @@ void UART6_TX_Handler (void);
 // *****************************************************************************
 
 
-void CHANGE_NOTICE_G_Handler (void)
+void __attribute__((used)) CHANGE_NOTICE_G_Handler (void)
 {
     CHANGE_NOTICE_G_InterruptHandler();
 }
 
-void UART6_FAULT_Handler (void)
+void __attribute__((used)) UART6_FAULT_Handler (void)
 {
     UART6_FAULT_InterruptHandler();
 }
 
-void UART6_RX_Handler (void)
+void __attribute__((used)) UART6_RX_Handler (void)
 {
     UART6_RX_InterruptHandler();
 }
 
-void UART6_TX_Handler (void)
+void __attribute__((used)) UART6_TX_Handler (void)
 {
     UART6_TX_InterruptHandler();
 }
