@@ -1,4 +1,4 @@
-<config configName="pic32mk_gp_db" projectName="nvm_fat_pic32mk_gp_db" configVersion="1.1" device="PIC32MK1024GPE100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
+<config configName="pic32mk_gp_db" projectName="nvm_fat_pic32mk_gp_db" configVersion="1.1" device="PIC32MK1024GPE100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -35,7 +35,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -469,7 +469,10 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
     &lt;GraphSettings canvasHeight=&quot;400&quot; canvasWidth=&quot;400&quot; dnOrder=&quot;0&quot;/&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;PowerProfiles dnOrder=&quot;1&quot;&gt;
+      &lt;Profile dnOrder=&quot;0&quot; id=&quot;profile0&quot; name=&quot;Main&quot;/&gt;
+    &lt;/PowerProfiles&gt;
+    &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_PIC32MK_GP_Development_Kit&quot; x=&quot;17&quot; y=&quot;59&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;16&quot; y=&quot;94&quot;/&gt;
@@ -477,7 +480,7 @@
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;dfp&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;drv_memory&quot; x=&quot;195&quot; y=&quot;154&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;nvm&quot; x=&quot;18&quot; y=&quot;219&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;sys_fs&quot; x=&quot;380&quot; y=&quot;202&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;sys_fs&quot; x=&quot;374&quot; y=&quot;198&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
   &lt;/UserData&gt;
@@ -3346,250 +3349,250 @@
          <value>__ROOTVIEW</value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.HashMap">
+   <generatedFileHashHistoryMap class="java.util.TreeMap">
       <entry>
-         <file>..\src\config\pic32mk_gp_db\system\int\sys_int_mapping.h</file>
-         <hash>a2dcf05575becc98aa212af1d220eda07487bd645d82c4d7a980aa3a22384cf3</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\fs\fat_fs\file_system\ffunicode.c</file>
-         <hash>3f1632c1f1e64b0b683b0d7e51341b9870728f398604869dd8211f1819509a8e</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\configuration.h</file>
-         <hash>a7134edf740aa1e626e4f9c272f95c6d2016ceb1d08fc7d880bf5243f5061aed</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\fs\src\sys_fs_local.h</file>
-         <hash>7e7721693694ecc133d6772321cad1337c0a2209b7457b9351dda3a01cb129b1</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\osal\osal_impl_basic.h</file>
-         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\driver\memory\drv_memory.h</file>
-         <hash>614702f2ebbb2a6a2b1baf1c9f8472c94ea3588e370c507c9bf408b1d86702af</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\driver\memory\drv_memory_nvm.h</file>
-         <hash>aafbf98cdcd6fde28e160f311729c3bce2823a42c90ff56ee3bcf3e018800fc5</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\fs\src\sys_fs_media_manager_local.h</file>
-         <hash>5d471f0372ec41b3ef362ad533beede076e4e959274e57221ed229b996d7231e</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\user.h</file>
-         <hash>451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\osal\osal.h</file>
-         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\osal\osal_definitions.h</file>
-         <hash>5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\system_common.h</file>
-         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\initialization.c</file>
-         <hash>8a0ccede1c8f3c3b4a5f2e25806ce8c6e51d2a9bd63b2cb55d22f287ba2cfcfe</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\system.h</file>
-         <hash>2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\interrupts.c</file>
-         <hash>2d175f38c94eeee3dac7b867b7f8fa90ff70565ca877a952598018e4b9d89539</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\fs\fat_fs\file_system\ff.h</file>
-         <hash>2906f8255a58097a83011b023f09dfa602c04c2d154c39a9e35fcb48823940ac</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\driver\memory\src\drv_memory.c</file>
-         <hash>b17712c4139596c0c43f0ff0d63c7ec07b8981a709b1d310321ca1834e842a8d</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\int\src\sys_int.c</file>
-         <hash>30ac5e334ca90204f545f1ab769ae26f421b910b3fb3be99354b364febceee64</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\toolchain_specifics.h</file>
-         <hash>38b3e0e3652463c4c84dc445fd0af062ddf1e36ce2aefeae250f3f0c4fef5685</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\interrupts.h</file>
-         <hash>7443435e3fe43f79bbeb2531408481dd0dea261393a5631d3a9f2887608fe3d2</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\fs\fat_fs\file_system\ff.c</file>
-         <hash>09f73618c1ac3bd9736650439be337fbfe49018a1db7205126fcbfde1e384a0f</hash>
+         <file>..\src\app.c</file>
+         <hash>632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620</hash>
       </entry>
       <entry>
          <file>..\src\app.h</file>
          <hash>8e35d8509552a4d1d6e6f123ad75694cf784a707f7dac592ed33b55121aa8e28</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_gp_db\driver\memory\src\drv_memory_nvm.c</file>
-         <hash>58243f9da95357beb459fd16a20c065fd919a4e5670e17b3a346e04b61a7b041</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.h</file>
-         <hash>0e32805aa6433f463487977d8d301136f6ad0149dacd6c5d5fd8afe65276f0a2</hash>
-      </entry>
-      <entry>
-         <file>..\src\app.c</file>
-         <hash>632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\debug\sys_debug.h</file>
-         <hash>5c34d947b4d700829a89d9d7616d941fa9e17047c67adc6de4d365b0a8ce39f4</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\system_media.h</file>
-         <hash>e61ba67015cfba6a7425d077cd2c633ba9989218bbe585078efe2face729401f</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.c</file>
-         <hash>36eb689026baee7f84ce2ea6fca3e197604166cdd7b9c187897b9add6fe908d1</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\system_module.h</file>
-         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\int\sys_int.h</file>
-         <hash>2c878ab7ff41ae56b5c0c3c94929ad66eb87b8660bf9a439177d049e8ad8f8c8</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\fs\src\sys_fs_fat_interface.c</file>
-         <hash>c7873a18d6d2ee9cb2eb1bf9c678dfc6c22837d4c22e5c3bcbf30507b3aa125f</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\p32MK1024GPE100.ld</file>
-         <hash>dc80ba3f4d685c9cfdfd61e3e4fd458211b17013eca88285e8e6894a8f2ebf8e</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\definitions.h</file>
-         <hash>78e29145f3763399dbbcf6e70b4379e7d60bba9f5785e95f78694258c8dabd3a</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\fs\sys_fs_fat_interface.h</file>
-         <hash>8abf10cb082958d08f5cf3210694cef73fdb6fa9b6a641e00da547cbcec0719b</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\device.h</file>
-         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\stdio\xc32_monitor.c</file>
-         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\driver\memory\src\drv_memory_file_system.c</file>
-         <hash>ad02bcbc7e97a16a5e8b08c735b79e783435094db2e1803bb0cafa4a7ee7eb25</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\driver\driver.h</file>
-         <hash>042fdd289460dbddb8e805850af7e3ac9aea95468e37414959781ebc5b2f454d</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\fs\src\sys_fs_media_manager.c</file>
-         <hash>e310ad7d9927852ef24ec9759f411815df4bfb494d8d288b799476ff30cf2c77</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\sys_tasks.h</file>
-         <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\fs\src\sys_fs.c</file>
-         <hash>62bc9b6487bb78c5a449bf1048a8a964f2d24a696fcb0671249e350a7fc7f140</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\peripheral\clk\plib_clk.c</file>
-         <hash>a5c5c23926927bd24709387c3ac9d84f0b619ca01b8c9097d34bc2f7b5e54d49</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\driver\memory\drv_memory_definitions.h</file>
-         <hash>b8f10e5a04840558da99e20856d3f7394b280d5e399d72ee5ef1cf13b3ee48f2</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\driver\driver_common.h</file>
-         <hash>5217965f6720b4fdf717e99ce9df4f2c9fbd82bbbc9655847166d1eefa806fee</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\peripheral\clk\plib_clk.h</file>
-         <hash>35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\driver\memory\src\drv_memory_file_system.h</file>
-         <hash>25417962a1c2116c903c6b4061d496b3aaf075ea17b372ca28e1766f23bc9c56</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\peripheral\nvm\plib_nvm.c</file>
-         <hash>246cb4074a910aaaa91372858759e8ead19fa430b518cfa0319f84de1faf17e7</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\fs\fat_fs\hardware_access\diskio.c</file>
-         <hash>accf63aa5c072a3e82a92eb72536ee727fd2b6e1acb1fb8f592dc3d074e4f69b</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\peripheral\evic\plib_evic.c</file>
-         <hash>49418f8e9224cbf0e9a8fe16f02965d960e516914a6a3354ff1cadc4f76ebd61</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\fs\sys_fs.h</file>
-         <hash>4ca0bf61b93d1b4335bad8755bfeeed6dfda8a7eb3f2eabfcd9239a0b78e01af</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32mk_gp_db\bsp\bsp.c</file>
          <hash>40897d2cabec1f448aa81ab2994ebeeb8e086f3669c4ebe93f68d3770936ec43</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\tasks.c</file>
-         <hash>68a3350dc4994ba349bf0450904b7b0e46c6af5df4c17dacbf1f1ac2bf8da87c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\bsp\bsp.h</file>
          <hash>66748ff99690dfee9eab382902316b82a2b46233bd8cb79c2da8978c44f595c8</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_gp_db\system\fs\fat_fs\hardware_access\diskio.h</file>
-         <hash>eabe00adfe80de32df0b75244c230f3a04dbc27cb29b1d418cef549e3e7a9ec2</hash>
+         <file>..\src\config\pic32mk_gp_db\configuration.h</file>
+         <hash>e8475bbc962b14ae8ae0f6d7d6d4ad88f9927324a617ac459a1fded8d4f06932</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\definitions.h</file>
+         <hash>7dc1d222f557dc78ad45209923dc0541f709e9cacccfd7037fc6bfcaff17ab85</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\device.h</file>
+         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\driver\driver.h</file>
+         <hash>042fdd289460dbddb8e805850af7e3ac9aea95468e37414959781ebc5b2f454d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\driver\driver_common.h</file>
+         <hash>5217965f6720b4fdf717e99ce9df4f2c9fbd82bbbc9655847166d1eefa806fee</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\driver\memory\drv_memory.h</file>
+         <hash>614702f2ebbb2a6a2b1baf1c9f8472c94ea3588e370c507c9bf408b1d86702af</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\driver\memory\drv_memory_definitions.h</file>
+         <hash>b8f10e5a04840558da99e20856d3f7394b280d5e399d72ee5ef1cf13b3ee48f2</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\driver\memory\drv_memory_nvm.h</file>
+         <hash>aafbf98cdcd6fde28e160f311729c3bce2823a42c90ff56ee3bcf3e018800fc5</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\driver\memory\src\drv_memory.c</file>
+         <hash>1922248aa8310ad78b6ac1e65a01e87d9a3d3e8ed5a5bebfbd9b198d66ce81ec</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\driver\memory\src\drv_memory_file_system.c</file>
+         <hash>ad02bcbc7e97a16a5e8b08c735b79e783435094db2e1803bb0cafa4a7ee7eb25</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\driver\memory\src\drv_memory_file_system.h</file>
+         <hash>25417962a1c2116c903c6b4061d496b3aaf075ea17b372ca28e1766f23bc9c56</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\driver\memory\src\drv_memory_local.h</file>
+         <hash>129258f301260bf3f612f02652c061c7df89379cc21950df0d02ba5f5ee1845d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\driver\memory\src\drv_memory_nvm.c</file>
+         <hash>58243f9da95357beb459fd16a20c065fd919a4e5670e17b3a346e04b61a7b041</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\exceptions.c</file>
-         <hash>7c1b9a2e42598d51c643984260a4b0d966a18f1ad97cc90d166aa9a4311ab6af</hash>
+         <hash>ed8f326d4f1abc2e74c1743119304a2f613522e3baacdd8df59fdda14c44619e</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\initialization.c</file>
+         <hash>2a2e369b545b9d348d62daf69d243decb8a9d81d7b786047ab96a02d3bacc2e1</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\interrupts.c</file>
+         <hash>bd219b75d8bedc27526bc441cfb9c7cea5845e35197e04fe939270b2f7cb7343</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\interrupts.h</file>
+         <hash>7443435e3fe43f79bbeb2531408481dd0dea261393a5631d3a9f2887608fe3d2</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\osal\osal.h</file>
+         <hash>1cfe3b61d9693b2369922041eef33fe16b3c1ccd9c85d4ded808b805f90a869c</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\osal\osal_definitions.h</file>
+         <hash>5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\osal\osal_impl_basic.h</file>
+         <hash>7f06b68ec1d6cf3bbd1129bdac599d108557e2c26ca5a58a28a3d59fdf772944</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\p32MK1024GPE100.ld</file>
+         <hash>1d0f13f4a7245d81a47147dd5e88e5c224a58fd7d2352f436b002dad4aba8a3a</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\peripheral\clk\plib_clk.c</file>
+         <hash>47a4d1efabaf0c84ea031dd4c646fa8aaa1d3131bceacc916e130b4efb1c239c</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\peripheral\clk\plib_clk.h</file>
+         <hash>35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\peripheral\evic\plib_evic.c</file>
+         <hash>484f0355fae8e6606ee1042c7926fa77750e7a9bcdd524e65ef48a840c995ec8</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\peripheral\evic\plib_evic.h</file>
+         <hash>448da35a1944883bf7c38207d29b529b217079ed60240fbf90dd20a1010ee1f4</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.c</file>
+         <hash>09801e15a630667dc480a7b79dab46ad5d6b643b53f67fc50359294d44ef6120</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.h</file>
+         <hash>9c4ad44081624111015aea7568034d07e1c67a471083d7ac5284d0bc9ea927af</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\peripheral\nvm\plib_nvm.c</file>
+         <hash>246cb4074a910aaaa91372858759e8ead19fa430b518cfa0319f84de1faf17e7</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\peripheral\nvm\plib_nvm.h</file>
+         <hash>591bfd1e4636801c0bd1e10b6d0398c206d467311d640f9511f991e72649b834</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\stdio\xc32_monitor.c</file>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\sys_tasks.h</file>
+         <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\debug\sys_debug.h</file>
+         <hash>aa94da8f32cbcb40672145542d149d077ff8f4b25c08d47d53e3d206d1c6bb83</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\fs\fat_fs\file_system\ff.c</file>
+         <hash>09f73618c1ac3bd9736650439be337fbfe49018a1db7205126fcbfde1e384a0f</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\fs\fat_fs\file_system\ff.h</file>
+         <hash>2906f8255a58097a83011b023f09dfa602c04c2d154c39a9e35fcb48823940ac</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\system\fs\fat_fs\file_system\ffconf.h</file>
          <hash>eb42d88a772858dbd895386063ff6fa76df37a06bf8ee6da1bf3a43a8d9584e4</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mk_gp_db\peripheral\nvm\plib_nvm.h</file>
-         <hash>5b5e696eff5809e5ece56ea149850122676f355751d77a31895767dbd3860de4</hash>
+         <file>..\src\config\pic32mk_gp_db\system\fs\fat_fs\file_system\ffunicode.c</file>
+         <hash>3f1632c1f1e64b0b683b0d7e51341b9870728f398604869dd8211f1819509a8e</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\fs\fat_fs\hardware_access\diskio.c</file>
+         <hash>accf63aa5c072a3e82a92eb72536ee727fd2b6e1acb1fb8f592dc3d074e4f69b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\fs\fat_fs\hardware_access\diskio.h</file>
+         <hash>eabe00adfe80de32df0b75244c230f3a04dbc27cb29b1d418cef549e3e7a9ec2</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\fs\src\sys_fs.c</file>
+         <hash>ecc5ea0bc26927dea239f8485e871def38b0170415921b6e2cd784aa8ef5932b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\fs\src\sys_fs_fat_interface.c</file>
+         <hash>60b86f1de0b9cb870c46cf96730cf666e2f4bedfd2d50a039542de27a750bb5c</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\fs\src\sys_fs_local.h</file>
+         <hash>7e7721693694ecc133d6772321cad1337c0a2209b7457b9351dda3a01cb129b1</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\fs\src\sys_fs_media_manager.c</file>
+         <hash>38a260f85a5aeebbba6049f5f99a60aa7961e490bdbc4e3ca5e8cf2df6c6200c</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\fs\src\sys_fs_media_manager_local.h</file>
+         <hash>5d471f0372ec41b3ef362ad533beede076e4e959274e57221ed229b996d7231e</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\fs\sys_fs.h</file>
+         <hash>4ca0bf61b93d1b4335bad8755bfeeed6dfda8a7eb3f2eabfcd9239a0b78e01af</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\fs\sys_fs_fat_interface.h</file>
+         <hash>7d398a893c42258ee2c06a2135087fd6ac9bcec02df07bea5882a5d55373ca4b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\fs\sys_fs_media_manager.h</file>
+         <hash>e777be6440f14c582e5e75fe021664b2eba99f57d781d5d58a22bea3a48ac9dd</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\int\src\sys_int.c</file>
+         <hash>30ac5e334ca90204f545f1ab769ae26f421b910b3fb3be99354b364febceee64</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\int\sys_int.h</file>
+         <hash>2c878ab7ff41ae56b5c0c3c94929ad66eb87b8660bf9a439177d049e8ad8f8c8</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\int\sys_int_mapping.h</file>
+         <hash>a2dcf05575becc98aa212af1d220eda07487bd645d82c4d7a980aa3a22384cf3</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\system.h</file>
+         <hash>2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\system_common.h</file>
+         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\system_media.h</file>
+         <hash>e61ba67015cfba6a7425d077cd2c633ba9989218bbe585078efe2face729401f</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\system\system_module.h</file>
+         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\tasks.c</file>
+         <hash>68a3350dc4994ba349bf0450904b7b0e46c6af5df4c17dacbf1f1ac2bf8da87c</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\toolchain_specifics.h</file>
+         <hash>b4de6e02e3e48c62f7ba233405ffdf6ef31bb971d1a7b49efa1676f45cabc1ac</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_gp_db\user.h</file>
+         <hash>451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995</hash>
       </entry>
       <entry>
          <file>..\src\main.c</file>
          <hash>d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\peripheral\evic\plib_evic.h</file>
-         <hash>5d2b2a2d0c07aaa79af7d507e11e666e511be2c8a65fd2179aab81c6547e985a</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\system\fs\sys_fs_media_manager.h</file>
-         <hash>2f7c76d5a40a41594e86a831470c67d7aeec5b6e540fb967518ce095fe6da271</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_gp_db\driver\memory\src\drv_memory_local.h</file>
-         <hash>129258f301260bf3f612f02652c061c7df89379cc21950df0d02ba5f5ee1845d</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
