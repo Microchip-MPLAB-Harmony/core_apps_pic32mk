@@ -1,0 +1,94 @@
+configVersion: 1.0.0
+componentName: tmr2
+coreVersion: 5.8.2
+device: PIC32MK1024GPE100
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: tmr2
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: bsp
+  type: package
+  version: v3.23.0
+- dependencyPackage: ''
+  name: core
+  type: package
+  version: v3.15.5
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: TMR2_TMR
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: i2c_bb
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: TMR
+            type: String
+          type: Attributes
+        type: DirectCapability
+      type: Attachments
+    type: tmr2
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: tmr2
+          x: '23'
+          y: '96'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    TIMER_CLOCK_FREQ:
+      attributes:
+        id: TIMER_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: tmr2
+            value: '60000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TIMER_PERIOD:
+      attributes:
+        id: TIMER_PERIOD
+      children:
+      - children:
+        - attributes:
+            id: tmr2
+            value: '17999'
+          type: Dynamic
+        type: Values
+      type: Long
+    TIMER_WIDTH:
+      attributes:
+        id: TIMER_WIDTH
+      children:
+      - children:
+        - attributes:
+            id: tmr2
+            value: '16'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}
