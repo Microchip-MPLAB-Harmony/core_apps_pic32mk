@@ -14,7 +14,7 @@
 
 //DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -54,8 +54,8 @@
 #include "peripheral/evic/plib_evic.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "osal/osal.h"
 #include "peripheral/uart/plib_uart6.h"
+#include "osal/osal.h"
 #include "task1.h"
 #include "task2.h"
 #include "task3.h"
