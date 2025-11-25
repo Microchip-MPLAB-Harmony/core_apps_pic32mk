@@ -25,7 +25,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32mk_gp_db\configuration.h
   hash: e205c00e0ba43adaac8f13ca00de2dd31dcaf16c1c903df1445191ada404241d
 - file: ..\src\config\pic32mk_gp_db\definitions.h
-  hash: 08decc410a7ec0787504b471db6bceeb5adb9b3ffd4ab72c6c311c1335203ecb
+  hash: 9bdfe7c0e283e99391fb12602798e00fc6c0331618ddeae6db0c999601a76d77
 - file: ..\src\config\pic32mk_gp_db\device.h
   hash: 4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442
 - file: ..\src\config\pic32mk_gp_db\driver\driver.h

@@ -54,10 +54,10 @@
 #include "peripheral/evic/plib_evic.h"
 #include "system/console/sys_console.h"
 #include "system/console/src/sys_console_uart_definitions.h"
+#include "peripheral/uart/plib_uart6.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "peripheral/uart/plib_uart6.h"
 #include "app.h"
 
 

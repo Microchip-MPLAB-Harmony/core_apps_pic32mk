@@ -2,8 +2,8 @@
 
 manifest_file_version: 1.0.0
 project: nvm_fat_pic32mk_mca_curiosity_pro
-creation_date: 2025-09-23T10:09:20.632+00:00[UTC]
-operating_system: Windows 10
+creation_date: 2025-11-25T11:06:36.555+00:00[UTC]
+operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
 device_name: PIC32MK0128MCA048

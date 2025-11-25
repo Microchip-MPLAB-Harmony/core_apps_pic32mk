@@ -93,7 +93,6 @@
         <itemPath>basic_freertos_pic32mk_curiosity_ultra_pic32mk_mcj_curiosity_pro/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mk_mcj_curiosity_pro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -259,7 +258,7 @@
         <property key="extra-include-directories-for-assembler"
                   value="../src/config/pic32mk_mcj_curiosity_pro;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MK"/>
         <property key="extra-include-directories-for-preprocessor"
-                  value="../src/config/pic32mk_mcj_curiosity_pro;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MK"/>
+                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MK;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/pic32mk_mcj_curiosity_pro;"/>
         <property key="false-conditionals" value="false"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>

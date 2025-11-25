@@ -90,7 +90,6 @@
         <itemPath>async_spi_self_loopback_multi_client_pic32mk_gp_db_pic32mk_gp_db/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mk_gp_db/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

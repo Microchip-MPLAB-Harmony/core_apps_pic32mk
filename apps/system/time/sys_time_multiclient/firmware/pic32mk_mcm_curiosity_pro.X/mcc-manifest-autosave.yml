@@ -2,8 +2,8 @@
 
 manifest_file_version: 1.0.0
 project: system_time_sys_time_multiclient_pic32mk_mcm_curiosity_pro
-creation_date: 2025-09-23T10:14:33.697+00:00[UTC]
-operating_system: Windows 10
+creation_date: 2025-11-25T10:59:41.628+00:00[UTC]
+operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
 device_name: PIC32MK1024MCM100

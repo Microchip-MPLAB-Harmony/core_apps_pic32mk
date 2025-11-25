@@ -35,7 +35,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32mk_mcj_curiosity_pro_freertos\configuration.h
   hash: 2ec2d827961c45a232cf80707c5671e17e0a7e1d1cc46875c3777687486f30ff
 - file: ..\src\config\pic32mk_mcj_curiosity_pro_freertos\definitions.h
-  hash: 0b13a8cd92cde2f4c493071df1e09776d6c0bacdc36b0b0205094271230f48ff
+  hash: c2bc0016208f91cb6c708265bf3b70eb6f22d5695820ea3fec6df8351c4713b3
 - file: ..\src\config\pic32mk_mcj_curiosity_pro_freertos\device.h
   hash: 4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442
 - file: ..\src\config\pic32mk_mcj_curiosity_pro_freertos\driver\driver.h

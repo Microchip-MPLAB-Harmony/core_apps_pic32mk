@@ -26,7 +26,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32mk_mcj_curiosity_pro\configuration.h
   hash: 9c61f5288599dc478bb078c5c615b40ab2235c79590ac0617bcbb59bac44e9e6
 - file: ..\src\config\pic32mk_mcj_curiosity_pro\definitions.h
-  hash: e1b807a6bffed2dda9abd39be73135f3165de50d9d607da99fc266e85cfb9fd1
+  hash: 52c11bc3325dae42d1e03b1ca9b213f1365045e9517e8aeb51ac9010b7dce9bb
 - file: ..\src\config\pic32mk_mcj_curiosity_pro\device.h
   hash: 4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442
 - file: ..\src\config\pic32mk_mcj_curiosity_pro\driver\driver.h

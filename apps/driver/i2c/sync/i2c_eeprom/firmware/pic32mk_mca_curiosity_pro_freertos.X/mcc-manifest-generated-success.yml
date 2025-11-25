@@ -2,8 +2,8 @@
 
 manifest_file_version: 1.0.0
 project: i2c_eeprom_pic32mk_mca_curiosity_pro_freertos
-creation_date: 2025-09-23T10:05:18.918+00:00[UTC]
-operating_system: Windows 10
+creation_date: 2025-11-25T11:18:58.468+00:00[UTC]
+operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
 device_name: PIC32MK0128MCA048
