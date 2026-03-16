@@ -1,0 +1,31 @@
+configVersion: 1.0.0
+componentName: BSP_PIC32MK_MCM_Curiosity_Pro
+coreVersion: 5.8.4
+device: PIC32MK1024MCM100
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: BSP_PIC32MK_MCM_Curiosity_Pro
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: bsp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: BSP_PIC32MK_MCM_Curiosity_Pro
+          x: '159'
+          y: '40'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols: {}
+  userData: {}
